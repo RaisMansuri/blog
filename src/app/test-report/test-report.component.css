@@ -1,0 +1,134 @@
+.five{
+    border: none;
+    background: none;
+    background-color: rgb(0,167,157);
+    color:#fff;
+    width: 185px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 17px;
+}
+.stick{
+    width: 12px;
+    height: 42px;
+    background-color:rgb(0,167,157);
+}
+.info-cards{
+    width: auto;
+    height: 150px;
+    background-color: #1bc1ee;
+    box-shadow: 10px 0px #dcdcdc;
+    margin-right: 10px;
+}
+.repor{
+    background-image: url('https://d2t0yxygbqzqe9.cloudfront.net/assets/images/repor.jpg');
+    background-repeat: no-repeat;
+    background-size: 1125px 216px;
+   
+}
+.icon-card{
+    background-image: url('https://d2t0yxygbqzqe9.cloudfront.net/assets/images/report.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    height: 260px;
+    background-size: cover;
+  
+    padding-top: 30px;
+}
+.para-test{
+    color:rgb(0,167,157);
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 90px;
+}
+.icon-img{
+    height: 81px;
+    width: 151px;
+}
+.type{
+    color:#fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+.para{
+    color:rgb(0,167,157);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 63px;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 379px) { 
+   .icon-card{
+    height: 260px;   
+   }
+   .cards-column{
+       padding-left: 60px;
+       padding-right: 60px;
+   }
+   .para-test{
+       font-size: 29px;
+       font-weight: bolder;
+       margin-top: 72px;
+   }
+   .open{
+       font-size: 17px;
+   }
+   #pafa{
+       margin-top:52px;
+   }
+ }
+ @media screen and (min-width: 380px) and (max-width: 430px) { 
+    .icon-card{
+     height: 260px;   
+    }
+    .cards-column{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    .para-test{
+        font-size: 29px;
+        font-weight: bolder;
+        margin-top: 72px;
+    }
+    .open{
+        font-size: 17px;
+    }
+    #pafa{
+        margin-top:52px;
+    }
+  }
+  @media screen and (min-width: 431px) and (max-width: 510px) { 
+    .icon-card{
+     height: 260px;   
+    }
+    .cards-column{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    .para-test{
+        font-size: 29px;
+        font-weight: bolder;
+        margin-top: 72px;
+    }
+    .open{
+        font-size: 17px;
+    }
+    #pafa{
+        margin-top:52px;
+    }
+  }
+  @media screen and (min-width: 510px) and (max-width: 650px) { 
+    .icon-card{
+     height: 260px;   
+    }
+    .cards-column{
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+    .para-test{
+        font-size: 29px;
+        font-weight: bolder;
+        margin-top: 72px;
+    }
+  }

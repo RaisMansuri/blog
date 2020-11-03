@@ -1,0 +1,20 @@
+<div>
+    <mat-dialog-content align="center">
+      <h4 style="color:#fff;">Book  an appointment</h4>
+      <label style="color:#fff;font-weight:700;font-size:18px;">Name : <input class="date-input" type="text" name="name" step="1" [ngModel] ="appoData.name" (ngModelChange)="appoData.name = $event"></label>
+      <br>
+      <label style="color:#fff;font-weight:700;font-size:18px;">Date : <input class="date-input" type="date" name="date" [ngModel] ="appoData.date | date:'yyyy-MM-dd'" (ngModelChange)="appoData.date = $event"> </label>
+      
+     <br>
+     <label style="color:#fff;font-weight:700;font-size:18px;">Time : <input class="date-input" type="time" name="time" step="1" [ngModel] ="appoData.time" (ngModelChange)="appoData.time = $event"></label>
+    </mat-dialog-content>
+    <mat-dialog-actions class="social-login-btn-container social-div" align="center">
+
+        <button type="button" (click)="sendData()"  class="btn book-button"> Book</button>
+     
+    </mat-dialog-actions>
+</div>
+
+
+
+

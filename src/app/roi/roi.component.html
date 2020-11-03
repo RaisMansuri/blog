@@ -1,0 +1,498 @@
+<div class="container" style="margin-top:120px;">
+
+  <div class="row">
+
+   <div class="col-md-6">
+       <div class="row" style="color:rgb(0,167,157);">
+           <h3 style="margin-right:10px;margin-top:14px;" class="head">Expenses</h3>
+           <mat-form-field> 
+             <mat-select [(value)]="expense.currone">
+               <mat-option style="color:rgb(0,167,157);" *ngFor="let tim of currency" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+           <h6 class="currency-sign">(₹/$/£/€)</h6>
+         </div>    
+          
+         <div class="row">
+
+             <label>Cost 1</label>
+             <form class="form">
+               <div class="form-group">
+                 <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.cost" name="cost" required>
+               </div> 
+             </form>
+         
+             <mat-form-field>
+               <mat-select placeholder="D/W/M/Y" [(value)]="expense.costt">
+                 <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                   {{tim.viewValue}}
+                 </mat-option>
+               </mat-select>
+             </mat-form-field>
+           </div>
+
+           <div class="row">
+
+               <label>Loan</label>
+               <form class="form">
+                 <div class="form-group">
+                   <input type="text" class="form-control input-field rounded-0 inp" placeholder="loan" [(ngModel)]="expense.loan" name="loan" required>
+                 </div> 
+               </form>
+           
+               <mat-form-field>
+                 <mat-select placeholder="D/W/M/Y" [(value)]="expense.loant">
+                   <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                     {{tim.viewValue}}
+                   </mat-option>
+                 </mat-select>
+               </mat-form-field>
+             </div>
+           
+             <div class="row">
+           
+               <label>Day to day</label>
+               <form class="form">
+                 <div class="form-group">
+                   <input type="text" class="form-control input-field rounded-0 inp" placeholder="day to day" [(ngModel)]="expense.dtd" name="dtd" required>
+                 </div> 
+               </form>
+           
+               <mat-form-field>
+                 <mat-select placeholder="D/W/M/Y" [(value)]="expense.dtdt">
+                   <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                     {{tim.viewValue}}
+                   </mat-option>
+                 </mat-select>
+               </mat-form-field>
+             </div>
+
+             <div class="row" *ngIf="ctwo">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                 <form class="form">
+                   <div class="form-group">
+                     <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costsecond" name="costsecond" required>
+                   </div> 
+                 </form>
+                 <mat-form-field>
+                   <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtsecond">
+                     <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                       {{tim.viewValue}}
+                     </mat-option>
+                   </mat-select>
+                 </mat-form-field>
+               </div>
+
+               <div class="row" *ngIf="cthird">
+                 <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                   <form class="form">
+                     <div class="form-group">
+                       <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costthird" name="costthird" required>
+                     </div> 
+                   </form>
+                   <mat-form-field>
+                     <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtthird">
+                       <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                         {{tim.viewValue}}
+                       </mat-option>
+                     </mat-select>
+                   </mat-form-field>
+                 </div>
+
+                 <div class="row" *ngIf="cfour">
+                   <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                     <form class="form">
+                       <div class="form-group">
+                         <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costfour" name="costfour" required>
+                       </div> 
+                     </form>
+                     <mat-form-field>
+                       <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtfour">
+                         <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                           {{tim.viewValue}}
+                         </mat-option>
+                       </mat-select>
+                     </mat-form-field>
+                   </div>
+
+                   <div class="row" *ngIf="cfive">
+                     <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                       <form class="form">
+                         <div class="form-group">
+                           <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costfive" name="costfive" required>
+                         </div> 
+                       </form>
+                       <mat-form-field>
+                         <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtfive">
+                           <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                             {{tim.viewValue}}
+                           </mat-option>
+                         </mat-select>
+                       </mat-form-field>
+                     </div>
+
+                     <div class="row" *ngIf="csix">
+                       <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                         <form class="form">
+                           <div class="form-group">
+                             <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costsix" name="costsix" required>
+                           </div> 
+                         </form>
+                         <mat-form-field>
+                           <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtsix">
+                             <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                               {{tim.viewValue}}
+                             </mat-option>
+                           </mat-select>
+                         </mat-form-field>
+                       </div>
+
+                       <div class="row" *ngIf="cseven">
+                         <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                           <form class="form">
+                             <div class="form-group">
+                               <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costseven" name="costseven" required>
+                             </div> 
+                           </form>
+                           <mat-form-field>
+                             <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtseven">
+                               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                                 {{tim.viewValue}}
+                               </mat-option>
+                             </mat-select>
+                           </mat-form-field>
+                         </div>
+
+                         <div class="row" *ngIf="ceight">
+                           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                             <form class="form">
+                               <div class="form-group">
+                                 <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costeight" name="costeight" required>
+                               </div> 
+                             </form>
+                             <mat-form-field>
+                               <mat-select placeholder="D/W/M/Y" [(value)]="expense.costteight">
+                                 <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                                   {{tim.viewValue}}
+                                 </mat-option>
+                               </mat-select>
+                             </mat-form-field>
+                           </div>
+
+                           <div class="row" *ngIf="cnine">
+                             <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                               <form class="form">
+                                 <div class="form-group">
+                                   <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costnine" name="costnine" required>
+                                 </div> 
+                               </form>
+                               <mat-form-field>
+                                 <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtnine">
+                                   <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                                     {{tim.viewValue}}
+                                   </mat-option>
+                                 </mat-select>
+                               </mat-form-field>
+                             </div>
+
+                             <div class="row" *ngIf="cten">
+                               <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+                                 <form class="form">
+                                   <div class="form-group">
+                                     <input type="text" class="form-control input-field rounded-0 inp" placeholder="cost" [(ngModel)]="expense.costten" name="costten" required>
+                                   </div> 
+                                 </form>
+                                 <mat-form-field>
+                                   <mat-select placeholder="D/W/M/Y" [(value)]="expense.costtten">
+                                     <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                                       {{tim.viewValue}}
+                                     </mat-option>
+                                   </mat-select>
+                                 </mat-form-field>
+                               </div>
+
+
+             <div class="row">
+         
+               <div (click)="gencost()" class="cir"><i class="fa fa-plus" style="font-size:16px;color:#fff;"></i></div>
+               <label>Cost {{gen}}</label>
+           
+             </div>
+           
+    
+
+   </div>
+   <div class="col-md-6">
+
+       <div class="row">
+           <h3 style="margin-right:10px;;margin-top:14px;" class="head">Earnings</h3>
+           <mat-form-field>
+             <mat-select [(value)]="expense.currtwo">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of currency" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+           <h6 class="currency-sign">(₹/$/£/€)</h6>
+         </div>
+                   
+         <div class="row">
+         
+           <label>Salary</label>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="salary" [(ngModel)]="expense.salary" name="salary" required>
+             </div> 
+           </form>
+         
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.salaryt">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+         
+               <div class="row">
+         
+           <label>Scholarship aid</label>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="scholarship" [(ngModel)]="expense.aid" name="aid" required>
+             </div> 
+           </form>
+         
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.aidt">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+         
+         <div class="row">
+         
+           <label>Part time</label>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="Part time" [(ngModel)]="expense.part" name="part" required>
+             </div> 
+           </form>
+         
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.partt">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+      
+         <div class="row" *ngIf="etwo">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningtwo" name="earningtwo" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningttwo">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="ethree">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningthree" name="earningthree" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningtthree">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="efour">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningfour" name="earningfour" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningtfour">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="efive">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningfive" name="earningfive" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningtfive">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="esix">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningsix" name="earningsix" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningtsix">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="eseven">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningseven" name="earningseven" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningtseven">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="eeight">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningeight" name="earningeight" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningteight">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="enine">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningnine" name="earningnine" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningtnine">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+         <div class="row" *ngIf="eten">
+           <input type="text" class="form-control input-field rounded-0 inp" placeholder="Name" required>
+           <form class="form">
+             <div class="form-group">
+               <input type="text" class="form-control input-field rounded-0 inp" placeholder="earning" [(ngModel)]="expense.earningten" name="earningten" required>
+             </div> 
+           </form>
+           <mat-form-field>
+             <mat-select placeholder="D/W/M/Y" [(value)]="expense.earningtten">
+               <mat-option style="color:rgb(0,167,157);"  *ngFor="let tim of time" [value]="tim.value">
+                 {{tim.viewValue}}
+               </mat-option>
+             </mat-select>
+           </mat-form-field>
+         </div>
+
+
+       <div class="row">
+   
+         <div (click)="genearning()" class="cir"><i class="fa fa-plus" style="font-size:16px;color:#fff;"></i></div>
+         <label>Earning {{ear}}</label>
+     
+       </div>
+
+
+   </div>
+
+
+  </div>
+  <button (click)="select();" class="report-button">ROI REPORT</button>
+  <h6 style="color:red;font-size:15px;font-weight:700;">{{warn}}</h6>
+
+
+<div style="padding:25px;height:600px;" class="container">
+
+ <div class="row" style="margin-bottom:11px;">
+   <div class="col-md-2" style="font-size:12px;padding-left: 0px;padding-right: 0px;font-size: 16px;"><label style="font-weight:700;">Break even</label></div>
+   <div class="col-md-1" style="color:rgb(0,167,157);padding-left:0px;"><div class="field">{{BEY}}</div></div>
+   <div class="col-md-9"><h6 class="currency-sign">(Min time taken when total cost is equal to total earnings.)</h6></div>
+ </div>
+ <div class="row">
+
+   <label>Growth rate</label>      
+     <form class="form">
+       <div class="form-group">
+         <input type="text" class="form-control input-field rounded-0 inp" placeholder="growth in %" [(ngModel)]="npv.growth" name="growth" required>
+       </div> 
+     </form>
+     <h6 class="currency-sign">(Annual growth of earnings expected over the years.)</h6>
+    
+   </div>
+
+   <div class="row">
+
+       <label>No. of Year</label>
+   <form class="form">
+     <div class="form-group">
+       <input type="text" class="form-control input-field rounded-0 inp" style="position:relative;left:7px;" placeholder="noy" [(ngModel)]="npv.noy" name="noy" required>
+     </div> 
+   </form>
+   <h6 class="currency-sign">(Time expected to pay off your total costs or loans.)</h6>
+   
+      
+     </div>
+    
+     <div class="row" style="margin-bottom:11px;">
+       <div class="col-md-2" style="font-size:12px;padding-left: 0px;padding-right: 0px;font-size: 16px;"><label style="font-weight:700;">NPV :</label></div>
+       <div class="col-md-1" style="color:rgb(0,167,157);padding-left:0px;"><div class="field">{{this.totalnpv}}</div></div>
+       <div class="col-md-9"><h6 class="currency-sign">(Value of the total cost less total earnings today based on the expected growth rate - goal is to reach 0 for early pay back of total costs.)</h6></div>
+     </div>
+     
+</div>
+
+
+
+

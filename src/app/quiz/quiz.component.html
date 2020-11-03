@@ -1,0 +1,119 @@
+<div class="setter">
+<div class="container-fluid">
+  
+  <div class="main"  [hidden]="isQuestionCardShow">
+   <div class="row display-4 justify-content-center mt-3 mb-3 ">
+     <div class="col-sm-8 ">
+      <div class="card">
+        <div class="card-body justify-content-center align-items-center">
+          <h4 class="text-primary texth">This Quiz Includes 10 Questions</h4>
+          <h4 class="text-success texth">Every Right Answer You Get +4</h4>
+          <h4 class="text-danger texth">Every Wrong Answer Your Score Reduces by 1</h4> 
+          <h4 class="text-warning texth">You Will Have 1 minutes to complete quiz</h4> 
+          <h4 class="text-primary texth">All The Best !!!</h4> 
+        </div>
+      </div>
+     </div>
+   </div>
+    
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      <div class="row display-4 justify-content-center align-items-center">
+        <div class="col-sm-12 col-lg-2 align-items-center">
+          <button class="btn btn-light btn-lg cursor-restriction" style="margin-top: 10px;margin-left:11px;margin-bottom:10px; background-color:rgb(0,167,157); color:white; font-weight: 500; border-radius:10px;" (click)="startQuiz()">
+            Start Quiz
+             </button>
+        
+      </div>
+    </div>
+  </div>
+  <div class="card mt-5" [hidden]="!isQuestionCardShow">
+    <div class="card-body">
+    <div>
+  </div>
+
+      <form #questionTest="ngForm" novalidate>
+      <app-countdown-timer init="60" *ngIf="isQuestionCardShow && !isSubmitted"></app-countdown-timer>
+        <div *ngFor="let ques of allQuestions">
+          <h6 class="text-btn-dark">{{ques.id}}) {{ques.question}}</h6>
+          
+          <div class="form-group col">
+            <div class="col-md-9 col-form-label">
+              <div class="form-check ">
+                <input class="form-check-input" type="radio" name="{{ques.id}}" value="a" [(ngModel)]="ques.selected">
+                <label class="form-check-label">{{ques.a}} </label>
+              </div>
+             
+              <div class="form-check  mr-1">
+                <input  class="form-check-input" type="radio" name="{{ques.id}}" value="b" [(ngModel)]="ques.selected">
+                <label class="form-check-label">{{ques.b}}</label>
+              </div>
+              
+              <div class="form-check  mr-1">
+                <input *ngIf="ques.c" class="form-check-input" type="radio" name="{{ques.id}}" value="c" [(ngModel)]="ques.selected">
+                <label class="form-check-label">{{ques.c}}</label>
+              </div>
+              <div class="form-check mr-1">
+                <input *ngIf="ques.d"  class="form-check-input" type="radio" name="{{ques.id}}" value="d" [(ngModel)]="ques.selected">
+                <label  class="form-check-label">{{ques.d}}</label>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-12" style="justify-content: center;display: flex;">
+          <button type="button" class="btn btn-danger" (click)="HomePage()" style="margin-right: 30px;">Cancel</button>
+          <button type="button" class="btn btn-primary" [disabled]="isAttempted" (click)="submitTest()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div bsModal #submitModal="bs-modal" class="modal fade" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center" style="color: #196f77;">
+        <h4>Total Questions: {{allQuestions.length}} </h4>
+        <h4 class="text-primary">
+          Total Answered: {{totalAnswered}}
+        </h4>
+        <h4 >
+          Right Answer : {{rightAnswer}}
+        </h4>
+        <h4 class="text-success">
+        Your Score : {{score}}/40
+        </h4>
+        <span>
+          <button type="button" class="btn btn-primary" (click)="checkAnswers()" style="margin-right: 17px;"> Answers</button>
+        </span>
+        <button type="button" class="btn btn-danger" (click)="submitModal.hide()" style="margin-left: 17px;">Close</button>
+      </div>
+    </div>
+  
+  </div>
+
+</div>
+
+
+
+<div bsModal #answerModal="bs-modal" class="modal fade" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center" style="color: #196f77;">
+        <div *ngFor="let ques of allQuestions" [style.color]="!ques.selected? '#ffc107' : ques.selected == ques.answer ? 'green': 'red'">
+          <div>{{ques.question}}</div>
+          <div>Your Answer: {{ques[ques.selected]}}</div>
+          <div>Right Answer: {{ques.answer}}) {{ques[ques.answer]}}</div>
+          <hr>
+        </div>
+        <button type="button" class="btn btn-danger" (click)="answerModal.hide()" style="margin-left: 17px;">Close</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+</div>

@@ -1,0 +1,980 @@
+<div class="profile_component_main_div" *ngIf="showFormTab">
+  <div class="profile_component_inner_main_div" [ngSwitch]="displayProfileSettings">
+
+
+  
+   <div class="row">
+     <div class="col-md-3">
+        <div class="profile_component_inner_heading_main_div">
+
+            <div class="profile_component_inner_heading_divs {{displayProfileSettings == 'basic_information' ? 'active':''}}" (click)="clickProfileTab('basic_information')">
+              <span>Basic Information</span>
+            </div>
+      
+            <div class="profile_component_inner_heading_divs {{displayProfileSettings == 'personal_information' ? 'active':''}}" (click)="clickProfileTab('personal_information')">
+              <span>Personal Information</span>
+            </div>
+            <div class="profile_component_inner_heading_divs {{displayProfileSettings == 'education_information' ? 'active':''}}" (click)="clickProfileTab('education_information')">
+              <span>Educational Information</span>
+            </div>
+            <div class="profile_component_inner_heading_divs {{displayProfileSettings == 'professional_information' ? 'active':''}}"
+              (click)="clickProfileTab('professional_information')">
+              <span>Professional Information</span>
+            </div>
+            <div class="profile_component_inner_heading_divs {{displayProfileSettings == 'interest_information' ? 'active':''}}" (click)="clickProfileTab('interest_information')">
+              <span>Interest Information</span>
+            </div>
+            <div class="profile_component_inner_heading_divs {{displayProfileSettings == 'lifestyle_information' ? 'active':''}}" (click)="clickProfileTab('lifestyle_information')">
+              <span>Lifestyle Information</span>
+            </div>
+            <div style="height:600px;" class="long-bar profile_component_inner_heading_divs {{displayProfileSettings == 'lifestyle_information'}}">
+                
+            </div>
+          </div>
+     </div>
+     <div class="col-md-9">
+        <div class="profile_information_view_main_div" *ngSwitchCase="'basic_information'">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="profile_information_view_inner_div">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Full Name
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="text" name="fullName" [value] = "fullname" [(ngModel)]="basicinfo.name" id="">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Date of Birth
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="dob" [(ngModel)]="basicinfo.dob" id="">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Email Id
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="email" name="emailId" [(ngModel)]="basicinfo.email" id="">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Phone Number
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="phoneNumber" [(ngModel)]="basicinfo.phone" id="">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                  <button style="width:270px;margin-left:41px;" class="save_proceed_btn" (click)="clicksave();basicsave()">Save and Proceed</button>
+              </div>
+              <div class="col-md-3" align="center">
+                  <button style="border:none;width:102px;margin-left:41px;margin-top:31px;background-color:rgb(0,167,157);color:#fff;font-weight:800;font-size:22px;height:38px;cursor:pointer;border-radius:6px;" (click)="backToProfile()">Back</button>
+              </div>
+              <div class="col-md-7"></div>
+
+
+            </div>
+          </div>
+  
+          <div class="profile_information_view_main_div" *ngSwitchCase="'personal_information'">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="profile_information_view_inner_div">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div>
+                                <label>
+                                  Gender
+                                </label>
+                                <div class="profile_input_div">
+                                  <input type="text" name="gender" [(ngModel)]="personalinfo.gender" id="">
+                                </div>
+                              </div>
+  
+                              <div class="m-t-md">
+                                <label>
+                                  Marital Status
+                                </label>
+                                <div class="profile_input_div">
+                                  <input type="text" name="marital_status" [(ngModel)]="personalinfo.marital" id="">
+                                </div>
+                              </div>
+  
+                              <div class="m-t-md">
+                                <label>
+                                  Number of Family Members
+                                </label>
+                                <div class="profile_input_div">
+                                  <input type="text" name="no_of_members" [(ngModel)]="personalinfo.familymembers" id="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Social Media
+                            </label>
+                            <div class="social_media_link_text">
+                              Facebook
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="facebook" [(ngModel)]="personalinfo.facebook" id="">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              Linkedin
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="linkedin" [(ngModel)]="personalinfo.linkedin" id="">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              Twitter
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="twitter" [(ngModel)]="personalinfo.twitter" id="">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Current Occupation
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="text" name="occupation" [(ngModel)]="personalinfo.occupation" id="">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Complete Residential Address
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="address" [(ngModel)]="personalinfo.address" id="">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Family Income
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="text" name="family_income" [(ngModel)]="personalinfo.familyincome" id="">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Skills
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="skills" [(ngModel)]="personalinfo.skills" id="">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Individual Income
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="text" name="individual_income" [(ngModel)]="personalinfo.individualincome" id="">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Extra Curricural Activities
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="eca" id="" [(ngModel)]="personalinfo.eca" placeholder="Eg.Horseback Riding , Karate, Public Speaking">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Highest Educational Qualification
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="text" name="educational_qualification" [(ngModel)]="personalinfo.higheduqual" id="">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <button style="width:270px;margin-left:41px;" class="save_proceed_btn" (click)="clicksave();personalsave()">Save and Proceed</button>
+                </div>
+                <div class="col-md-3" align="center">
+                    <button style="border:none;width:102px;margin-left:41px;margin-top:31px;background-color:rgb(0,167,157);color:#fff;font-weight:800;font-size:22px;height:38px;cursor:pointer;border-radius:6px;" (click)="clickProfileTab('basic_information')">Back</button>
+                </div>
+                <div class="col-md-7"></div>
+  
+  
+              </div>
+          </div>
+  
+          <div class="profile_information_view_main_div" *ngSwitchCase="'education_information'">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="profile_information_view_inner_div">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div>
+                                <label>
+                                  High School/ 10th Grade Subjects
+                                </label>
+                                <div class="profile_input_div">
+                                  <input type="text" name="grade_10" [(ngModel)]="educationalinfo.highschool" id="">
+                                </div>
+                              </div>
+  
+                              <div class="m-t-md">
+                                <label>
+                                  College/ 12th Grade Subjects
+                                </label>
+                                <div class="profile_input_div">
+                                  <input type="text" name="grade_12" [(ngModel)]="educationalinfo.college" id="">
+                                </div>
+                              </div>
+  
+                              <div class="m-t-md">
+                                <label>
+                                  Bachelor's Degree
+                                </label>
+                                <div class="social_media_link_text">
+                                  Field of Study
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="field_study" [(ngModel)]="educationalinfo.bfield" id="">
+                                </div>
+  
+                                <div class="social_media_link_text m-t-sm">
+                                  University/ College Name
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="college_name" id="" [(ngModel)]="educationalinfo.buniversity">
+                                </div>
+  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Social Media
+                            </label>
+                            <div class="social_media_link_text">
+                              TOEFL Score
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="toefl" id="" [(ngModel)]="educationalinfo.toeflscore">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              GRE Score
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="gre" id="" [(ngModel)]="educationalinfo.grescore">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              GMAT Score
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="gmat" id="" [(ngModel)]="educationalinfo.gmatscore">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              IELTS Score
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="ielts" id="" [(ngModel)]="educationalinfo.ieltsscore">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+  
+  
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  
+  
+                              <div class="m-t-md">
+                                <label>
+                                  Master's Degree
+                                </label>
+                                <div class="social_media_link_text">
+                                  Field of Study
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="field_study_master" id="" [(ngModel)]="educationalinfo.mfield">
+                                </div>
+  
+                                <div class="social_media_link_text m-t-sm">
+                                  University/ College Name
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="college_name_master" id="" [(ngModel)]="educationalinfo.muniversity">
+                                </div>
+  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div class="m-t-sm">
+                            <label>
+                              Additional Educational Qualifications
+                            </label>
+                            <div class="social_media_link_text">
+                              &nbsp;
+                            </div>
+                            <div class="profile_input_div m-t-sm">
+                              <input type="text" name="toefl" id="" [(ngModel)]="educationalinfo.additionalqual">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              &nbsp;
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="toefl" id="">
+                            </div>
+  
+                          </div>
+  
+                        </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <button style="width:270px;margin-left:41px;" class="save_proceed_btn" (click)="clicksave();educationalsave()">Save and Proceed</button>
+                </div>
+                <div class="col-md-3" align="center">
+                    <button style="border:none;width:102px;margin-left:41px;margin-top:31px;background-color:rgb(0,167,157);color:#fff;font-weight:800;font-size:22px;height:38px;cursor:pointer;border-radius:6px;" (click)="clickProfileTab('personal_information')">Back</button>
+                </div>
+                <div class="col-md-7"></div>
+  
+  
+              </div>
+          </div>
+  
+          <div class="profile_information_view_main_div" *ngSwitchCase="'professional_information'">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="profile_information_view_inner_div">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="">
+                                <label>
+                                  Job 1
+                                </label>
+                                <div class="social_media_link_text">
+                                  Position & Role
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="position_1" id="" [(ngModel)]="professionalinfo.onerole">
+                                </div>
+  
+                                <div class="social_media_link_text m-t-sm">
+                                  Location
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="location_1" id="" [(ngModel)]="professionalinfo.onelocation">
+                                </div>
+  
+                                <div class="social_media_link_text m-t-sm">
+                                  Salary
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="salary_1" id="" [(ngModel)]="professionalinfo.onesalary">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Job 1
+                            </label>
+                            <div class="social_media_link_text">
+                              Position & Role
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="position_1" id="" [(ngModel)]="professionalinfo.tworole">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              Location
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="location_1" id="" [(ngModel)]="professionalinfo.twolocation">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              Salary
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="salary_1" id="" [(ngModel)]="professionalinfo.twosalary">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+                <div class="col-md-4">
+                    <button style="width:270px;margin-left:41px;" class="save_proceed_btn" (click)="clicksave();professionalsave()">Save and Proceed</button>
+                </div>
+                <div class="col-md-3" align="center">
+                    <button style="border:none;width:102px;margin-left:41px;margin-top:31px;background-color:rgb(0,167,157);color:#fff;font-weight:800;font-size:22px;height:38px;cursor:pointer;border-radius:6px;" (click)="clickProfileTab('education_information')">Back</button>
+                </div>
+                <div class="col-md-7"></div>
+  
+  
+              </div>
+          </div>
+  
+          <div class="profile_information_view_main_div" *ngSwitchCase="'interest_information'">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="profile_information_view_inner_div">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Next Move
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="text" name="next_move" id="" [(ngModel)]="interestinfo.nextmove">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Desired Living Expenses
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="living_expenses" id="" [(ngModel)]="interestinfo.desiredlivingexp">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Field of Interest
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="email" name="interest" id="" [(ngModel)]="interestinfo.fieldofinterest">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Any Desire in the next 5 years
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="next_desire" id="" [(ngModel)]="interestinfo.desirefive">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+  
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Job Location
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="email" name="job_location" id="" [(ngModel)]="interestinfo.joblocation"> 
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Any Desire in the next 10 years
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="next_desire_10" id="" [(ngModel)]="interestinfo.desireten">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Job Profile Type
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="email" name="profile_type" id="" [(ngModel)]="interestinfo.jobtype">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Life Goal 1
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="life_goal_1" id="" [(ngModel)]="interestinfo.onegoal">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                      <div class="row m-t-md">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <label>
+                            Desired Salary
+                          </label>
+                          <div class="profile_input_div">
+                            <input type="email" name="desired_salary" id="" [(ngModel)]="interestinfo.desiredsalary">
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+                            <label>
+                              Life Goal 2
+                            </label>
+                            <div class="profile_input_div">
+                              <input type="text" name="life_goal_2" id="" [(ngModel)]="interestinfo.twogoal">
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <button style="width:270px;margin-left:41px;" class="save_proceed_btn" (click)="clicksave();interestsave()">Save and Proceed</button>
+                </div>
+                <div class="col-md-3" align="center">
+                    <button style="border:none;width:102px;margin-left:41px;margin-top:31px;background-color:rgb(0,167,157);color:#fff;font-weight:800;font-size:22px;height:38px;cursor:pointer;border-radius:6px;" (click)="clickProfileTab('professional_information')">Back</button>
+                </div>
+                <div class="col-md-7"></div>
+  
+  
+              </div>
+          </div>
+  
+  
+          <div class="profile_information_view_main_div" *ngSwitchCase="'lifestyle_information'">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="profile_information_view_inner_div">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="">
+  
+                                <div class="social_media_link_text">
+                                  Entertainment
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="entertainment" id="" [(ngModel)]="lifestyleinfo.entertainment">
+                                </div>
+  
+                                <div class="social_media_link_text m-t-sm">
+                                  Living
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="living" id="" [(ngModel)]="lifestyleinfo.living">
+                                </div>
+  
+                                <div class="social_media_link_text m-t-sm">
+                                  Food
+                                </div>
+                                <div class="profile_input_div">
+                                  <input type="text" name="food" id="" [(ngModel)]="lifestyleinfo.food">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="offset-lg-2 col-lg-5 col-md-6 col-sm-6 col-xs-6">
+                          <div>
+  
+                            <div class="social_media_link_text">
+                              Travel
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="travel" id="" [(ngModel)]="lifestyleinfo.travel">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              Electronics/Internet
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="internet" id="" [(ngModel)]="lifestyleinfo.electronics">
+                            </div>
+  
+                            <div class="social_media_link_text m-t-sm">
+                              Miscellaneous
+                            </div>
+                            <div class="profile_input_div">
+                              <input type="text" name="miscellaneous" id="" [(ngModel)]="lifestyleinfo.misc">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <button style="width:270px;margin-left:41px;" class="save_proceed_btn" (click)="clicksave();lifestylesave()">Save and Proceed</button>
+                  </div>
+                  <div class="col-md-3" align="center">
+                      <button style="border:none;width:102px;margin-left:62px;margin-top:31px;background-color:rgb(0,167,157);color:#fff;font-weight:800;font-size:22px;height:38px;cursor:pointer;border-radius:6px;" (click)="clickProfileTab('interest_information')">Back</button>
+                  </div>
+                  <div class="col-md-7"></div>
+    
+    
+                </div>
+            </div>   
+          
+
+     </div>
+     
+   </div>
+
+
+
+
+
+   
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div style="padding-top:50px;height:auto;width:100%;margin-top:80px;background-color:rgb(0,167,157);margin-bottom:60px;" *ngIf="showQuizTab">
+
+  <div style="width:100%;height:auto;background-color:#fff;">
+
+
+    <div class="container">
+      <div class="row">
+         <div class="col-md-12" align="center">
+            <h2 style="color:rgb(0,167,157);font-weight:500;letter-spacing:2px;margin-top:7px;">Welcome to the <br><span style="font-size:24px;font-weight:800;"> Online Personality Test </span>
+            </h2>
+         </div>
+      </div>
+     
+      <div class="card" [hidden]="isQuestionCardShow">
+        <div class="card-body">
+         
+          <div class="row justify-content-md-center">
+           
+            <div class="col-sm-12 col-lg-3" align="center">
+                <img style="width:100px;height:117px;" src="{{cdnHost}}/assets/images/test.png" alt="test"><br>
+              <button class="btn btn-block btn-outline-primary cursor-restriction quiz-button fill-button" style="margin-top: 10px;" (click)="startQuiz()">
+                Start Free Test </button>
+            </div>
+            <div class="col-sm-12 col-lg-3" align="center"> 
+              <img style="width:100px;height:117px;" src="{{cdnHost}}/assets/images/test.png" alt="test"><br>
+                  <a href="/tuformdetails" class="btn btn-block btn-outline-primary cursor-restriction quiz-button fill-button" style="margin-right: 24px;width: 190px;margin-top: 10px;">
+                    Start Advance Test </a> 
+                  </div>
+                  <div class="col-sm-12 col-lg-3" align="center"> 
+                    <img style="width:100px;height:117px;" src="{{cdnHost}}/assets/images/test.png" alt="test"><br>
+                        <a href="/quiz" class="btn btn-block btn-outline-primary cursor-restriction quiz-button fill-button" style="margin-right: 24px;width: 190px;margin-top: 10px;">
+                          Start Free Quiz </a> 
+                        </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" [hidden]="!isQuestionCardShow">
+        <div class="card-body">
+          <form #questionTest="ngForm" novalidate>
+            <p style="color:rgb(0,167,157);font-weight:600;">Completed {{completed}} of 50.</p>
+            <div *ngFor="let ques of allQuestions">
+              <div style="color:rgb(0,167,157);font-size:17px;font-weight:600;"> {{ques.question}}</div>
+              <div class="form-group row">
+                <div class="col-md-9 col-form-label">
+                  <div class="form-check  mr-1">
+                    <input class="form-check-input" type="radio" name="{{ques.id}}" value="1" [(ngModel)]="ques.selected">
+                    <label class="form-check-label">Agree {{ques.a}} </label>
+                  </div>
+                  <div class="form-check mr-1">
+                    <input class="form-check-input" type="radio" name="{{ques.id}}" value="2" [(ngModel)]="ques.selected">
+                    <label class="form-check-label">Slightly agree  {{ques.b}}</label>
+                  </div>
+                  <div class="form-check mr-1">
+                    <input class="form-check-input" type="radio" name="{{ques.id}}" value="3" [(ngModel)]="ques.selected">
+                    <label class="form-check-label">Neutral {{ques.c}}</label>
+                  </div>
+                  <div class="form-check mr-1">
+                    <input class="form-check-input" type="radio" name="{{ques.id}}" value="4" [(ngModel)]="ques.selected">
+                    <label class="form-check-label">Slightly disagree {{ques.d}}</label>
+                  </div>
+                  <div class="form-check mr-1">
+                    <input class="form-check-input" type="radio" name="{{ques.id}}" value="5" [(ngModel)]="ques.selected">
+                    <label class="form-check-label">Disagree {{ques.e}}</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-12" style="display: flex;">
+              <button type="button" class="btn btn-default prev-button" (click)="Prev()" >Prev</button>
+              <button type="button" class="btn btn-default next-button" style="margin-left:10px;" (click)="Next()" *ngIf="!submitButton">Next</button>
+              <button type="button" class="btn btn-primary submit-button" *ngIf="submitButton" (click)="submitTest()">Submit</button>
+              <br><p style="color:red;font-size:14px;font-weight:700;margin-left:8px;">{{error}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+
+</div>
+
+
+
+<div style="background-color:rgb(0,167,157);margin-top:55px;height:auto;padding-top:50px;" *ngIf="showProfileTab">
+  <div class="row">
+    <div class="container white-text text-center" style="background-color:#fff;color:#fff;height:auto;margin-bottom:45px;">
+
+
+      <div class="row" style="margin-top: 1em; margin-bottom: 1em; margin-left: 2em; margin-right: 2em;">
+
+        <div class="col-md-12">
+          <h2 style="color:rgb(0,167,157);font-weight:800;font-size:35px;">Personal Profile</h2>
+          
+          <p class="white-text" style="font-size:25px;font-weight:700;color:rgb(0,167,157);margin-bottom:0px;">Hi
+            <span style="font-size:25px;font-weight:700;color:rgb(0,167,157);">{{username}}</span>
+          </p>
+          <p  style="color:rgb(0,167,157);font-size:22px;font-weight:500;">Welcome to the CareerNaksha Dashboard.
+            <br/> We’d like to get to know you a little better.</p>
+            
+        </div>
+        <div class="col-md-12" style="width:100%;height:auto;">
+   
+          <div class="row">
+ 
+            <div style="width:100%;" class="row uploadList" *ngFor="let item of uploader.queue">
+                <div class="col-sm-4" style="color:rgb(0,167,157);"></div>
+                <div class="col-sm-4" style="color:rgb(0,167,157);font-size:20px;font-weight:500;">
+                    {{item.file.name}}
+                  <div class="progres" style="border:2px solid rgb(0,167,157);padding:0px;height:6px;margin-top:10px;margin-bottom:10px;">
+                     <div class="progress-circle"></div>
+                      <div class="progress-bar" [ngStyle]="{'width':item.progress+'%','color':'rgb(0,167,157),height:28px;'}"></div>
+                     
+                   
+                  </div>
+                </div>
+        
+            </div>
+            <div style="width:100%;height:85px;text-align:center;margin-top:10px;" align="center"  *ngIf="uploader?.queue?.length > 0">
+                 <button  style="height:40px;width:120px;font-weight:700;background-color:rgb(0,167,157);" type="button" class="btn-primary btn" (click)="uploader.uploadAll()">Submit</button>
+            </div>
+        
+        </div>
+
+        </div>
+
+
+
+            <div class="row">
+
+              <div class="col-md-3" align="center">
+                  <img style="width:183px;height:154px;" src="{{cdnHost}}/assets/images/upload.png" alt="upload">
+                  <label style="padding:10px;background: rgb(0,167,157);display: table;font-size:19px;border-radius:8px;color: #fff;font-weight:bold;cursor:pointer;">Upload<input size="35" style="margin-bottom:10px;display:none;" name="fileUpload" type="file" id="fileUpload" multiple ng2FileSelect [uploader]="uploader" class="upload-button"></label>
+                  <p class="odd-green-text small-link-text"  style="color:rgb(0,167,157);font-size:14px;font-weight:400;">These can include your background profile, resume, CV, bio document, about yourself document etc.</p>
+                  <p style="color:rgb(0,167,157);font-weight:800;font-size:15px;">{{uploadedfiles.file}}</p>
+                </div>
+                <div class="col-md-3 col-sm-12  col-xs-12" align="center">
+                  <img style="width:130px;height:130px; margin-top: 15px;" src="{{cdnHost}}/assets/images/expert.png" alt="test"><br>
+                  <button class="fill-button" (click)="scroll()" routerLink="/experts" style="color:#fff;background:none;background-color:rgb(0,167,157);font-size:18px;font-weight:bold;border:none;cursor:pointer;margin-top:16px; outline:none;">Experts</button>
+                  <p class="odd-green-text small-link-text"  style="color:rgb(0,167,157);font-size:15px;font-weight:400;margin-top:5px;">Talk to our experts</p>
+                </div>
+              <div class="col-md-3" align="center" style="padding-top:17px;">
+                  <img style="width:128px;height:122px;margin-bottom:13px;" src="{{cdnHost}}/assets/images/test.png" alt="test"><br>
+                  <button class="fill-button" (click)="showTest()" [disabled]="test" style="color:#fff;background:none;background-color:rgb(0,167,157);font-size:18px;font-weight:bold;border:none;cursor:pointer;margin-top:5px;">Take Assessment </button>
+                  <p class="odd-green-text small-link-text"  style="color:rgb(0,167,157);font-size:15px;font-weight:400;margin-top:5px;">Take tests or assessments</p>
+                  <p style="color:rgb(0,167,157);font-weight:800;font-size:15px;" *ngIf="test">Reach out to support@careernaksha.com or call at +91-8469149288 for enabling your customized test</p>
+                </div>
+                <div class="col-md-3" align="center">
+                  <img style="width:183px;height:154px;" src="{{cdnHost}}/assets/images/roi.png" alt="test"><br>
+                  <button class="fill-button" (click)="scroll()" routerLink="/roi" style="color:#fff;background:none;background-color:rgb(0,167,157);font-size:18px;font-weight:bold;border:none;cursor:pointer;margin-top:5px;">ROI Calculator</button>
+                  <p class="odd-green-text small-link-text"  style="color:rgb(0,167,157);font-size:15px;font-weight:400;margin-top:5px;">Calculate your returns.</p>
+                </div>
+        </div>
+
+
+        <div class="row align-items-center">
+
+          <div class="col-md-3" align="center">
+            <img style="width:183px;height:154px;" src="{{cdnHost}}/assets/images/build.png" alt="upload"><br>
+            <button style="margin-bottom:10px;cursor:pointer;" class="fill-button" (click)="fillManually()">Manual Profile</button>
+            <p class="odd-green-text small-link-text"  style="color:rgb(0,167,157);font-size:14px;font-weight:400;">You will be required to input basic information about yourself, your educational qualifications, career status, interests etc.</p>
+        </div>
+          
+
+          <div class="col-md-1 col-sm-12  col-xs-12" align="center"> </div>
+
+          <div class="col-md-8 col-sm-12  col-xs-12"  align="center"  >
+                
+                <div class="row info-row">
+                    <div class="col-md-5 col-sm-6 col-xs-6"  style="text-align:center;">
+                        <label style="color:rgb(0,167,157);font-weight:700;">(Refrence) Where did you hear about us?</label>
+                    </div>
+                    <div class="col-md-7 col-sm-6 col-xs-6">
+                      <form class="form">
+                        <div class="form-group">
+                          <input style="margin-left:10px;" (keydown)="knowReason($event)" type="text" class="form-control input-field rounded-0 inp"  [(ngModel)]="know.refrence" name="refrence" required>
+                        </div> 
+                      </form>
+                    </div>
+                </div>
+
+                
+                <div class="row info-row">
+                      <div class="col-md-5 col-sm-6 col-xs-6" style="text-align:left;">
+                          <label style="color:rgb(0,167,157);font-weight:700;">(Reason) What exactly help are you looking for?</label>
+                      </div>
+                      <div class="col-md-7 col-sm-6 col-xs-6">
+                        <form class="form">
+                          <div class="form-group">
+                            <input style="margin-left:10px;" (keydown)="knowReason($event)" type="text" class="form-control input-field rounded-0 inp"  [(ngModel)]="know.reason" name="reason" required>
+                          </div> 
+                        </form>
+                      </div>
+                  </div>
+
+            
+            </div>
+
+          </div>
+          
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 

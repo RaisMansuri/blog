@@ -1,0 +1,47 @@
+<mat-dialog-content align="center" >
+  <div class="registration_main_div" style="overflow:hidden;">
+    <div class="registration_inner_div">
+     
+
+      <div class="reg_form_div">
+       
+
+        <mat-dialog-content align="center">
+          <p style="color:#fff;font-weight:800;font-size:16px;margin-bottom:4px;">Join CareerNaksha</p>
+          <form class="form" [formGroup]="form" #userForm="ngForm">
+            <div class="form-group">
+              <input type="text" class="form-control input-field rounded-0" formControlName="name" placeholder="Name" name="email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control input-field rounded-0" placeholder="Mobile Number" formControlName="phone" name="phone" maxlength="10" required> 
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control input-field rounded-0" placeholder="Email" formControlName="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control input-field rounded-0" placeholder="Create Password" formControlName="password" name="password" required>
+            </div>
+            <div class="form-group">
+              <input formControlName="conformpassword" type="password" class="form-control input-field rounded-0" placeholder="Confirm Password" name="email" required>
+            </div>
+            <button type="button" (click)="onSubmit();" style="width:100%;height:34px;font-weight:700;font-size:15px;border:2px solid #fff;background-color:rgb(0,167,157);color:#fff;" class="btn">Create Account</button>
+          </form>
+          <div class="error" style="padding-top:12px;color:#fff;font-weight:900;">
+            {{errormessage}}
+          </div>
+         
+         
+          <p style="color:#fff;font-weight:500;margin-top:5px;margin-bottom:0px; text-align: center;">Or</p>
+          <div (click)="openLoginDialog()" style="text-transform: uppercase; font-size:17px;font-weight:700;cursor:pointer;color:#fff">Login to your account</div>
+        </mat-dialog-content>
+       
+       
+        
+       </div>
+
+    </div>
+  </div>
+</mat-dialog-content>
+
+
+

@@ -1,0 +1,250 @@
+
+  body{
+    margin: 0;
+    padding: 0;
+      font-family: Raleway, Sans Serif;
+    
+    }
+    
+    nav{
+      overflow: hidden;
+    }
+    
+    
+      nav ul {
+          list-style: none;
+    
+          margin: 0;
+          padding: 0;
+      }
+    
+      nav ul li{
+        float: left;
+      text-align: right;
+    
+      }
+    nav ul li a{
+    
+      color: #14AEA5;
+      text-decoration: none;
+      display: inline-block;
+      padding: 30px 25px;
+    
+    }
+    
+    nav ul li a:hover{
+      background-color:rgb(0,167,157);
+      color: white;
+    }
+    
+    nav img{
+      float: left;
+      padding: 15px 15px;
+      height: 80px;
+      padding-left: 85px;
+    
+      padding-right: 400px;
+    }
+    
+    div #text{
+      margin-top: 50px;
+      text-align: center;
+      color:rgb(0,167,157);
+    }
+
+   
+    
+    .navTab
+    {
+      background-color: black;
+      overflow: hidden;
+    }
+    
+    .cImages{
+    
+      width: 100%;
+      height: 500px;
+    }
+    
+    .indi{
+    
+      background-color: black;
+    }
+    
+    .controller{
+      background-color: black;
+    }
+    
+    .Add{
+      color:rgb(0,167,157);
+    }
+    
+  
+    
+   .WhyUsDiv {
+      margin: 10px;
+      height: auto;
+      width: auto;
+    }
+
+    .InnerText{
+      padding-top: 100px;
+      padding-left: 20px;
+    }
+    .study .InnerText{
+    
+      padding-top: 100px;
+      padding-left: 30px;
+    }
+    
+    .image{
+
+      height: auto;
+      width: auto;
+    
+      padding-left: 0px;
+    }
+    
+    .CardContainer{
+      width: auto;
+      height: 600px;
+      padding-left: 140px;
+      padding-top: 100px;
+      margin-bottom: 50px;
+    }
+    
+    .CardContainer .card{
+      height: 530px;
+      width: 350px;
+      float: left;
+      margin-right: 50px;
+    }
+    
+   .stcontainer{
+     height: auto;
+     width: auto;
+   }
+
+   .whycontainer{
+    
+    height: auto;
+     width: auto;
+     margin-top: 20px;
+     padding-right: 20px;
+   }
+    
+    .CardContainer .card .Ctext{
+    
+      padding-top: 20px;
+      text-align: center;
+    
+    }
+
+     .description{
+    
+      padding-top: 20px;
+      text-align: left;
+    
+    }
+    
+    .b1{
+      height: 40px;
+      width: 150px;
+    border-radius: 50px;
+    
+    }
+
+    .enroll{
+
+      text-align: center;
+    }
+
+
+
+
+
+    section.pricing {
+      background:rgb(255, 255, 255);
+    }
+    
+    .pricing .card {
+      border: none;
+      border-radius: 1rem;
+      transition: all 0.2s;
+      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    .pricing hr {
+      margin: 1.5rem 0;
+    }
+    
+    .pricing .card-title {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      letter-spacing: .1rem;
+      font-weight: bold;
+    }
+    
+    .pricing .card-price {
+      font-size: 3rem;
+      margin: 0;
+    }
+    
+    .pricing .card-price .period {
+      font-size: 0.8rem;
+    }
+    
+    .pricing ul li {
+      margin-bottom: 1rem;
+    }
+    
+    .pricing .text-muted {
+      opacity: 0.7;
+    }
+    
+    .pricing .btn { 
+      font-size: 80%;
+      border: none;
+      border-radius: 5rem;
+      letter-spacing: .1rem;
+      font-weight: bold;
+      padding: 1rem;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+     background-color: rgb(0,167,157);
+    }
+    
+    
+    @media (min-width: 992px) {
+      .pricing .card:hover {
+        margin-top: -.25rem;
+        margin-bottom: .25rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+      }
+      .pricing .card:hover .btn {
+        opacity: 1;
+      }
+    }
+
+    .no-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .img-fluid {
+      width: auto;
+      height: auto;
+    }
+    .img-fluid1 {
+      width: auto;
+      height: 335px;
+    }
+    .img-fluid2 {
+      width: auto;
+      height: 345px;
+    }
+    
+   
+
+  

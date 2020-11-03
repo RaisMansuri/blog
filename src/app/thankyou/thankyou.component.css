@@ -1,0 +1,31 @@
+.wrapper{
+
+   background-image: url("https://d2t0yxygbqzqe9.cloudfront.net/assets/images/product/main_banner.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 100%;
+   margin-right: 0px;
+    margin-left:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 55px;
+    padding-bottom: 55px;
+    padding-top: 110px;
+    
+}
+span{
+    color:rgb(0,167,157);font-size:22px;
+    font-weight:800;
+}
+.thank-content{
+    padding-left:120px;
+    padding-right:120px;
+}
+
+@media screen and (min-width: 300px) and (max-width:700px) { 
+    .thank-content{
+        padding-left: 44px;
+        padding-right: 60px;
+    }
+     
+   }

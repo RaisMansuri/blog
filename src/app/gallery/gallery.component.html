@@ -1,0 +1,164 @@
+<div class="btn-group btn-group-toggle Events" align="center" data-toggle="buttons" (click)="toggle()" (click)="toggle2()" id="btn">
+    <label class="btn btn-secondary btn-lg active">
+      <input type="radio" name="options" id="option1" autocomplete="off" checked> Past Events
+    </label>
+    
+    <label class="btn btn-secondary btn-lg ">
+      <input type="radio" name="options" id="option2" autocomplete="off" > Upcoming Events
+    </label>
+  </div>
+
+  <div class="container gallery-container">      
+        <div class="tz-gallery">  
+            <ng-container *ngIf="pastevent">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail" style="width: 330px;">
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/School.jpeg">
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/School.jpeg" alt="photos of school" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">   
+                                        <h3>Seminars at School</h3>
+                                        <p>Career Naksha has enlighted many minds of students about the various career opportunities.</p>
+                                        <a href="gallery/schools" class="btn btn-primary">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail" style="width: 310px;">
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/college.jpg"> 
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/college.jpg" alt="photos of college" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">   
+                                        <h3>Seminars at College</h3>
+                                        <p>Career Naksha has enlighted many minds of College students about the various career opportunities in their choosen course.</p>
+                                        <a href="gallery/college" class="btn btn-primary">View More </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+    
+                        <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail" style="width: 300px;">
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Global Vidhya.jpg">                    
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/Global Vidhya.jpg" alt="photos of Global Vidhya 2020" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">       
+                                        <h3>Global Vidhya 2020</h3>
+                                        <p>Our event GlobalVidhya 2020 was successfully organized and was attended by 500+ students at Maharaja Sayajiroa University, Vadodara.</p>
+                                        <a href="gallery/event-globalvidhya" class="btn btn-primary">View More </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail" >
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Youth Events.jpeg">                    
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/Youth Events.jpeg" alt="Rotary club" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">       
+                                        <h3>Youth Events</h3>
+                                        <p>A very great successful event which was organized by Career Naksha in which all the students and the experts of different fields came together and shared their ideas about the different career fields and their future scopes.</p>
+                                        <a href="gallery/youth-events" class="btn btn-primary">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail" style="width: 310px;" >
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/media.jpg">                    
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/media.jpg" alt="CareerNaksha in Media" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">       
+                                        <h3>CareerNaksha in Media</h3>
+                                        <p>A very great successful event which was organized by Career Naksha in which all the students and the experts of different fields came together and shared their ideas about the different career fields and their future scopes.</p>
+                                        <a href="gallery/careermedia" class="btn btn-primary">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail" style="width: 300px;">
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/sarthi.jpeg">                    
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/sarthi.jpeg" alt="ongoing-event" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">       
+                                        <h3>Ongoning Events</h3>
+                                        <p>Our Saarthi Volunteers reaching out to different schools(both English and Gujarati medium) of Vadodara with the mission 
+                                            “ How to cope with Exam stress”.
+                                            The sessions were very enriching and students actually understood how to prepare for exams and be ready to face the result with a 😊 
+                                            “Koshish Karne Walton ki kabhi haar nahin hotin.”</p>
+                                        <a href="gallery/ongoing-events" class="btn btn-primary">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail">
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Upcoming Events/Projectdisha.jpeg">
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/Upcoming Events/Projectdisha.jpeg" alt="Projectdisha" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">   
+                                        <p>Students, Get ready to be guided for future and Career opportunities on the basis of your skills through Orientation, Psychometric, Counseling and Soft skills.</p>
+                                        <a href="gallery/csr-activities-social-work/project-disha" class="btn btn-primary" >View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="column">
+                                <div class="thumbnail" style="width: 310px;">
+                                    <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/jobFair/careerrojgar.jpeg">
+                                        <img src="{{cdnHost}}/assets/galleryPhotos/jobFair/careerrojgar.jpeg" alt="careerrojgar" width="100%" height="auto">
+                                    </a> 
+                                    <div class="caption">  
+                                        <h3>CareerRozgaar</h3> 
+                                        <p>CareerRozgaar(maiden initiative of Careernaksha to give jobs to students of MS University) took active part in the Job fair organised by MS University.</p>
+                                        <a href="gallery/careerrojgar/job-fair" class="btn btn-primary" >View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+    </ng-container>
+    </div>
+    </div>
+    
+   
+
+
+    <div class="container gallery-container">      
+        <div class="tz-gallery">  
+            <ng-container *ngIf="UpcomingEvent">
+
+                <div class="row">
+
+                   
+                  
+                </div>
+            </ng-container>
+            
+        </div>
+    </div>
+
+

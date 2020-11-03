@@ -1,0 +1,16 @@
+.input-field{
+    border:1px solid #fff;
+    background: none;
+    height: 55px;
+}
+.input-field::placeholder{
+    color:#fff;
+    font-size: 18px;
+
+}
+.input-field:focus{
+    background: none;
+}
+input:focus{
+    outline: 0!important;
+}

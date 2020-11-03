@@ -1,0 +1,67 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <div class="jumbotron">
+        <form action="/registerForm" method="POST" name="form" [formGroup]="form" (ngSubmit)="form.valid" >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text"  class="form-control" formControlName="name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}" required />
+            <div class="invalid-feedback">
+              <div>Name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" formControlName="age" [ngClass]="{'is-invalid':form.get('age').touched && form.get('age').invalid}" maxlength="2" required />
+            <div class="invalid-feedback">
+              <div>Age is required</div>
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}"   />
+            <div *ngIf="form.get('email').touched && form.get('email').invalid"  class="invalid-feedback">
+              <div *ngIf="form.get('email').errors.required">Email Name is required</div>
+              <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Phone">Phone</label>
+            <input type="tel" class="form-control"  formControlName="phone" [ngClass]="{'is-invalid':form.get('phone').touched && form.get('phone').invalid}" maxlength="10" />
+            <div class="invalid-feedback">
+              <div>Phone is required</div>
+            </div>
+          </div>   
+          <div class="form-group">
+            <label for="standards">I am currently a</label>
+            <select class="form-control" formControlName="standards"  required>
+              <option *ngFor="let std of standards" [value]="std.value">
+                {{std.viewValue}}
+              </option>
+            </select>
+        </div> 
+
+        <div class="form-group">
+          <label for="report">I am looking for a</label>
+          <select class="form-control" formControlName="report" required>
+            <option *ngFor="let rep of report" [value]="rep.value">
+              {{rep.viewValue}}
+            </option>
+          </select>
+      </div> 
+          <div class="form-group">
+
+            <button routerLink="/tutest" class="btn btn-primary"  [disabled]="!form.valid" (click)="onTuFormSubmit()"><a href="https://pages.razorpay.com/psychometric-test-careernaksha"  target="_blank" rel="noopener" style="color:white">Buy Now</a></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
