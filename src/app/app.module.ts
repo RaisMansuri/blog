@@ -54,6 +54,10 @@ import { BlogComponent } from './blog/blog.component';
 import { DetailblogComponent } from './detailblog/detailblog.component';
 import { RouterModule } from '@angular/router';
 
+import { RecoverpwdDialogComponent } from './recoverpwd-dialog/recoverpwd-dialog.component';
+import { ResetpwdComponent } from './resetpwd/resetpwd.component';
+import { VadodaraComponent } from './vadodara/vadodara.component';
+
 
  const config = new AuthServiceConfig([  
   {
@@ -111,7 +115,10 @@ import { RouterModule } from '@angular/router';
     QuizComponent,
     CountdownTimerComponent,
     AhmedabadComponent,
-    DetailblogComponent
+    DetailblogComponent,
+    RecoverpwdDialogComponent,
+    ResetpwdComponent,
+    VadodaraComponent
    
   ],
   

@@ -32,6 +32,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this.getBlogs().subscribe(data => {
+      console.log("---data blogs---",data);
       this.blogs=data;
     })
   }

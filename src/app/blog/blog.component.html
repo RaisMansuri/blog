@@ -20,12 +20,12 @@
 
   <div class="col-md-6" >
     <div class="card" style="width:100%;" >
-    <a href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><img class="card-img-top" src="https://dashboard.careernaksha.com{{blog.blog_image.url}}" alt="Card image" style="width:100%;"></a>
+    <a href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><img class="card-img-top" src="https://dashboard.careernaksha.com{{blog.blog_image.url}}" alt="Card image" style="width:100%;"></a>
       <div class="card-body">
-      <a href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h4 class="card-title" style="color:rgb(0,167,157);font-weight:800;font-size:27px;">  {{blog["blog_title"]}}</h4></a>
+      <a href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h4 class="card-title" style="color:rgb(0,167,157);font-weight:800;font-size:27px;">  {{blog["blog_title"]}}</h4></a>
 
         <p class="card-text"> {{blog["blog_fdetail"]}}</p>
-        <a href="detailblog/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support
+        <a href="detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support
 
 ')" class="btn read-more" >Read More</a>
             </div>

@@ -40,8 +40,8 @@ export const routes: Routes = [
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
 
   },
-  { path: 'blog', component:BlogComponent},
-  { path: "detailblog/{{blog['blog_url']}}", component:DetailblogComponent},
+  { path: 'blogs', component:BlogComponent},
+  { path: "detailblog/:id/:blog_url", component:DetailblogComponent},
   { path: 'products', component: ProductsComponent },
   { path: 'thankyou', component: ThankyouComponent },
   { path: '', component: HomepageComponent },
