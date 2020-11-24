@@ -1,13 +1,11 @@
+
 .blog-pic{
     height: 400px;
     width: 100%;
     background-image: url("https://d2t0yxygbqzqe9.cloudfront.net/assets/images/Blog.png");
     background-position: center;
-    margin-right: 0px;
-    margin-left:0px;
-    padding-left: 0px;
     margin-bottom: 30px;
-    padding-right: 0px; 
+   
     
 }
 .read-more{
@@ -24,6 +22,10 @@
     margin-top:77px;
 }
 
+.container{
+    width: auto;
+    height: auto;
+}
 
 
 @media screen and (min-width: 300px) and (max-width:700px) { 

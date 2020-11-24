@@ -1,150 +1,95 @@
-
-
-
-@media only screen and (min-device-width : 360px) and (max-device-width: 640px) 
-{
-  .card-div {
-    background-image: url('https://d2t0yxygbqzqe9.cloudfront.net/assets/images/about/team.png');
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 500px;
-    margin-left: auto;
-  }
-    .card-div-tall {
-      grid-row: span 2 / auto;
-    }
-    .card-div-wide {
-      grid-column: span 2 / auto;
-    }
-  
- .expert-detail {
-   padding-left: 37%;
-   font-size: 4px;
-   line-height: 1.05;
- }
- .expert-data {
-   font-size: 4px;
-   line-height: 0.95;
- }
- .expert-label {
-   font-size: 5vw;
- }
- .appointment-button {
-   margin-top:  10px;
-   height: 15px;
-  
- } 
+* {
+  box-sizing: border-box;
 }
 
-
-@media only  screen and (min-device-width:400px) and (max-device-width:600px)
-{
-  .card-div {
-    background-image: url('https://d2t0yxygbqzqe9.cloudfront.net/assets/images/about/team.png');
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 500px;
-    margin-left: auto;
-  }
-    .card-div-tall {
-      grid-row: span 2 / auto;
-    }
-    .card-div-wide {
-      grid-column: span 2 / auto;
-    }
-  
- .expert-detail {
-   padding-left: 37%;
-   font-size: 5px;
-   line-height: 1.20;
- }
- .expert-data {
-   font-size: 5px;
-   line-height: 1.15;
- }
- .expert-label {
-   font-size: 5vw;
- }
- .appointment-button {
-   margin-top: 20px;
- 
- } 
+.text {
+  background-color: rgb(1,167,157);
+  margin-top: 100px;
+  margin-left: 200px;
 }
 
+.column {
+  float: left;
+  width: 47%;
+  padding: 0 10px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
 
-.paratwo{
-    color: rgb(0,167,157);
-    margin-top:-15px;
-    font-size: 19px;
-    font-weight: 600;
-  }
-  .spantwo{
-    font-weight: 800;
-    font-size: 19px;
-  }
-.card-div{
-  background-image: url('https://d2t0yxygbqzqe9.cloudfront.net/assets/images/about/team.png');
-  background-repeat:no-repeat;
-  background-position: center;
-  background-size: cover;
+.row {  margin-left: 5%;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.star {
+  text-align: left;
+}
+
+.checked {
+  color: yellow;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 10px;
+   border: 1px solid black;
+   height: 375px;
+   width: auto;
+}
+.card1 {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); 
+  padding: 0px 15px;
+  text-align: left;
+  color: black;
+  background-color: grey;
+  border-radius: 5px;
+}
+.circle {
+  margin-left: 5%;
+  margin-bottom: 10px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+  border: 2px solid rgb(0, 0, 0);
+  margin-top: 10px;
+}
+
+.circle img {
   width: 100%;
-  height: 346px;
-  margin-top: 20px;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
 }
-.expert-label{
 
-  color: #fff;
-  font-size: 12px;
-  font-weight: bolder;
-}
 
 .expert-detail{
-  color: #fff;
-  font-size: 11px;
+  color: rgb(0, 0, 0);
   font-weight: 600;
-  margin-bottom: 0px;
-  letter-spacing: 1px;
-  font-size: 12px;
-  font-weight: bolder;
-
-
+  margin-left: 5%;
+  margin-top: -15px;
 }
-.expert-div{
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 55px;
-  padding-bottom: 3px;
-}
+
 .expert-data{
-  color: rgb(0,167,157);
-  font-size: 12px;
-  font-weight: 600;
+  color: rgb(0, 0, 0);
+  font-weight: 300;
   margin-bottom: 6px;
-  letter-spacing: 1px;
-  
-}
-
-.data-label{
-  color: rgb(0,167,157);
-  font-size: 12px;
-   font-weight: bolder;
-}
+  font-size: 15px;
+  margin-right: 5%;
+  text-indent: 0px;
+  }
 
 
-.data-div{
- padding-left: 65px;
- padding-right: 65px;
- padding-top: 14px;
- height:141px;
-}
 .appointment-button{
   border:none;
   background: none;
-  background-color: rgb(0,167,157);
+  background-color: rgb(1,167,157);
   color:#fff;
   width: 230px;
   height: 36px;
@@ -152,93 +97,103 @@
   cursor: pointer;
   font-weight: bold;
   outline: none;
+  margin-top: 5px;
+  margin-left: 5%;
+}
+.pokl {
+  margin-right: 15px;
 }
 
 
-
-/***.paratwo{
-  color: rgb(0,167,157);
-  margin-top:-15px;
-  font-size: 19px;
-  font-weight: 600;
-}
-.spantwo{
-  font-weight: 800;
-  font-size: 19px;
-}
- 
-.card-div{
-background-image: url('https://d2t0yxygbqzqe9.cloudfront.net/assets/images/about/team.png');
-background-repeat:no-repeat;
-background-position: center;
-background-size: cover;
-width: 100%;
-height: 346px;
-margin-top: 20px;
-}
-.expert-label{
-
-color: #fff;
-font-size: 12px;
- font-weight: bolder;
+.poki p{
+  text-indent: -22px;
+  margin-left: 5%;
 }
 
-.expert-detail{
-color: rgb(255, 255, 255);
-font-size: 11px;
-font-weight: 600;
-margin-bottom: 0px;
-letter-spacing: 1px;
-font-size: 12px;
-font-weight: bolder;
-
-
-}
-.expert-div{
-padding-left: 32px;
-padding-right: 32px;
-padding-top: 55px;
-padding-bottom: 3px;
-}
-.expert-data{
-color: rgb(0,167,157);
-font-size: 12px;
-font-weight: 600;
-margin-bottom: 6px;
-letter-spacing: 1px;
+.expertise p{
+  
+  margin-left: 10%;
 }
 
-.data-label{
-color: rgb(0,167,157);
-font-size: 12px;
- font-weight: bolder;
+.intro1 {
+  margin-left: 30%;
+  margin-top: 30px;
+  font-size: 25px;
 }
 
-
-.data-div{
-padding-left: 65px;
-padding-right: 65px;
-padding-top: 14px;
-height:141px;
+.intro2 {
+  margin-left: 30%;
+  margin-top: -10px;
+  font-size: 20px;  
 }
-.appointment-button{
-border:none;
-background: none;
-background-color: rgb(0,167,157);
-color:#fff;
-width: 230px;
-height: 36px;
-padding: 6px;
-cursor: pointer;
-font-weight: bold;
-outline: none;
+.intro3 {
+  text-indent: -5px;
+  margin-left: 28%;
 }
 
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 10px;
+     border: 1px solid black;
+     height: auto;
+     width: auto;
+  }
+  .expert-detail{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-left: 7%;
+    margin-top: -15px;
+  }
+  
+  .expert-data{
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    margin-bottom: 6px;
+    font-size: 15px;
+    margin-right: 5%;
+    text-indent: 0px;
+    }
+    .appointment-button{
+      border:none;
+      background: none;
+      background-color: rgb(1,167,157);
+      color:#fff;
+      width: 230px;
+      height: 36px;
+      padding: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+      margin-top: 5px;
+      margin-left: 5%;
+      margin-bottom: 3%;
+    }
 
 
-.avatar {
-  vertical-align: middle;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}*/
+  .circle {
+    margin-left: 30%;
+    margin-right: 40%;
+  }
+  
+  .intro1 {
+    margin-left: 0.5%;
+    font-size: 25px;
+  }
+  .intro2 {
+    margin-left: 0.5%;
+    font-size: 18px;
+  }
+  .intro3 {
+    margin-left: -3%;
+  }
+  
+}

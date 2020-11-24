@@ -12,7 +12,9 @@ export class DetailblogComponent implements OnInit {
   title="";
   url=``;
   imageUrl = "";
-  blogDetail="";
+  blogsubDetail="<p>{{blogDetail}}</p>";
+  author="";
+  date="";
   constructor(private http:HttpClient, private route: ActivatedRoute) { }
   getDetailBlog(){
     return this.http.get<any>(`https://dashboard.careernaksha.com/blogs/${this.id}`)
@@ -24,9 +26,11 @@ export class DetailblogComponent implements OnInit {
       console.log("---data blog detail---",data);
       this.title=data.blog_title
       this.imageUrl=`https://dashboard.careernaksha.com${data.blog_image.url}`
-      this.blogDetail=data.blog_fdetail
-      
+      this.blogsubDetail=data.blog_subdetail 
+      this.author=data.blog_author
+      this.date=data.blog_date
     })
+    
   }
 
 }
