@@ -57,7 +57,7 @@ import { RouterModule } from '@angular/router';
 import { RecoverpwdDialogComponent } from './recoverpwd-dialog/recoverpwd-dialog.component';
 import { ResetpwdComponent } from './resetpwd/resetpwd.component';
 import { VadodaraComponent } from './vadodara/vadodara.component';
-
+import { MarkdownModule } from 'ngx-markdown';
 
  const config = new AuthServiceConfig([  
   {
@@ -131,6 +131,7 @@ import { VadodaraComponent } from './vadodara/vadodara.component';
 
   imports: [
     ToastrModule.forRoot(),
+    MarkdownModule.forRoot(),
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     CounterModule.forRoot(),

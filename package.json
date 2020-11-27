@@ -50,6 +50,7 @@
     "ngx-countdown": "^10.0.1",
     "ngx-counter": "^0.3.2",
     "ngx-cpf-cnpj": "^4.0.0",
+    "ngx-markdown": "^11.0.0",
     "ngx-toastr": "^12.1.0",
     "prerender-node": "^3.2.5",
     "protobufjs": "^6.9.0",

@@ -31,9 +31,11 @@
    <!-- <div class="col-md-1" style="background-color:lightgrey;font-size:16px;">. . .</div>  !-->
    <div class="col-md-2"></div>
 </div>
-<div class="row blog-content"  innerHTML="{{blogsubDetail}}">
-  
-</div>
+<!-- <div class="row blog-content"  [innerHTML]="blogsubDetail"> </div>  -->
+  <div class="row blog-content" >
+    <markdown [data]="blogsubDetail"  ></markdown>
+  </div>
+
     </div>
     </div>
 </div>
