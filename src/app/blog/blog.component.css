@@ -1,4 +1,3 @@
-
 .blog-pic{
     height: 400px;
     width: 100%;
@@ -30,12 +29,13 @@
 
 @media screen and (min-width: 300px) and (max-width:700px) { 
    .blog-pic{
+       width: 80%;
        background-repeat: no-repeat;
        height: 302px;
        background-size: 100%;
        margin-bottom: 0px;
        contain: layout;
+       background-position: left;
    }
    
   }
-  

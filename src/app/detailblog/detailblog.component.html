@@ -1,45 +1,43 @@
-<div class="container">
-    <div class="article">
-        <div class="row">
-            <h1 style="font-weight:200;" class="title">{{title}}</h1>
-          </div>
 
-          <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-5"><p style="font-size:14px;font-weight:800;">{{ blogauthor}}</p></div>
-                    <div class="col-md-4" style="margin-right:0px;"><p style="font-size:14px;font-weight:500;"> {{ blogdate }}</p></div>
-                    <div class="col-md-3"></div>
-                  </div>
+<div class="container">
+  <div class="article">
+      <div class="row">
+          <h4 style="font-weight:200;" class="title">{{title}}</h4>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+              <div class="row">
+                  <div class="col-md-5"><p style="font-size:14px;font-weight:800;">{{author}}</p></div>
+                  <div class="col-md-4" style="margin-right:0px;"><p style="font-size:14px;font-weight:500;"> {{date}}</p></div>
+                  <div class="col-md-3"></div>
+                </div>
 
 <div class="row content-pic">
-    <div class="article-image"><img [src]="imageUrl" /></div>
+  <div class="article-image"><img [src]="imageUrl" /></div>
 </div>
 <div class="row" style="margin-top:25px;margin-bottom:25px;">
-    <div id="fb-root"></div>
-    <!--<div id="fb-share" style="background-color:#4267b2;margin-right:34px; text-align: center;"><div style="padding-top:4px;" class="col-md-3 social-div fb-share-button social-button" data-href="http://www.careernaksha.com/blogs/" data-layout="button_count" data-size="large" data-mobile-iframe="false"><a target="_blank" href="{{fb_share}}" class="fb-xfbml-parse-ignore" >Share</a></div></div>-->
-   <div class="col-md-3 social-div"><a href="https://www.facebook.com/company/careernaksha" class="social-link"><button style="background-color: #3b5998;" class="social-button"><i class="fab fa-facebook-f"></i> FACEBOOK</button></a></div> 
-          
-  <div class="col-md-3 social-div" ><a class="twitter-share-button"
-    href="{{twitter_share}}"
-    data-size="large">
-  <button style="background-color: #00aced;" class="social-button"><i class="fab fa-twitter"></i> TWITTER</button></a></div>
-   
-
-  <div class="col-md-3 social-div"><a href="{{google_share}}" onclick="javascript:window.open(this.href,
-    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=0,width=0');return false;"><button style="background-color:#DB4437;" class="social-button"><i class="fab fa-google-plus-g"></i> GOOGLE +</button></a></div>
-   <!-- <div class="col-md-1" style="background-color:lightgrey;font-size:16px;">. . .</div>  !-->
-   <div class="col-md-2"></div>
-</div>
-<!-- <div class="row blog-content"  [innerHTML]="blogsubDetail"> </div>  -->
-  <div class="row blog-content" >
-    <markdown [data]="blogsubDetail"  ></markdown>
-  </div>
-
-    </div>
-    </div>
-</div>
-</div>
-
+  <div id="fb-root"></div>
+  <!--<div id="fb-share" style="background-color:#4267b2;margin-right:34px; text-align: center;"><div style="padding-top:4px;" class="col-md-3 social-div fb-share-button social-button" data-href="http://www.careernaksha.com/articles/" data-layout="button_count" data-size="large" data-mobile-iframe="false"><a target="_blank" href="{{fb_share}}" class="fb-xfbml-parse-ignore" >Share</a></div></div>-->
+<div class="col-md-3 social-div"><a href="https://www.facebook.com/company/careernaksha" class="social-link"><button style="background-color: #3b5998;" class="social-button"><i class="fab fa-facebook-f"></i> FACEBOOK</button></a></div> 
         
-  
+<div class="col-md-3 social-div" ><a class="twitter-share-button" href="{{twitter_share}}" data-size="large">
+<button style="background-color: #00aced;" class="social-button"><i class="fab fa-twitter"></i> TWITTER</button></a></div>
+ 
+
+<div class="col-md-3 social-div"><a href="{{google_share}}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=0,width=0');return false;"><button style="background-color:#DB4437;" class="social-button"><i class="fab fa-google-plus-g"></i> GOOGLE +</button></a></div>
+ <!-- <div class="col-md-1" style="background-color:lightgrey;font-size:16px;">. . .</div>  !-->
+ <div class="col-md-2"></div>
+</div>
+<div class="row blog-content">
+  <div class="col-md-10">
+<markdown [data]="blogsubDetail"  ></markdown>
+</div>
+</div>
+  </div>
+  </div>
+</div>
+</div>
+
+      

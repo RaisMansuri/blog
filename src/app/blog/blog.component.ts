@@ -30,6 +30,8 @@ export class BlogComponent implements OnInit {
     return this.http.get<any>('https://dashboard.careernaksha.com/blogs')
    }
 
+ 
+
   ngOnInit() {
     this.getBlogs().subscribe(data => {
       console.log("---data blogs---",data);

@@ -16,9 +16,9 @@
 
 
 <div class="container">
-<div class="row" style="margin-bottom:20px;margin-top: 60px;" *ngFor="let blog of blogs">
+<div class="row" style="margin-bottom:20px;margin-top: 60px;" >
 
-  <div class="col-md-6" >
+  <div class="col-md-6" *ngFor="let blog of blogs" >
     <div class="card" style="width:100%;" >
     <a href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><img class="card-img-top" src="https://dashboard.careernaksha.com{{blog.blog_image.url}}" alt="Card image" style="width:100%;"></a>
       <div class="card-body">
