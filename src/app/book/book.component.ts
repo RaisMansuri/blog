@@ -17,7 +17,8 @@ export class BookComponent implements OnInit {
     id ="";
     name="";
     cname="";
-
+    date="";
+    read_date="";
     appoData ={
     name:"",
      date:"",
@@ -43,14 +44,17 @@ export class BookComponent implements OnInit {
 
 sendData(){
   console.log(this.appoData.time);
+  this.date=new Date(`${this.appoData.date}T${this.appoData.time}`).toISOString()
+  this.read_date=new Date(`${this.appoData.date}T${this.appoData.time}`).toDateString()
   this.http.post<any>('https://dashboard.careernaksha.com/appointments',{
     "Name":`${this.appoData.name}`,
-    "Date":`${this.appoData.date} ${this.appoData.time}`,
+    "Date":`${this.date}`,
     "counsellor":{
       "_id":`${this.id}`,
       "name": `${this.name}`,
     },
     "Counsellor_Name": `${this.cname}`,
+    "read_Date":`${this.read_date}` + ' ' + `${this.appoData.time}`
   })
   .subscribe(data => {
     console.log(data + ':00')

@@ -7,6 +7,7 @@ import { UserService } from './user.service';
 import { Title } from '@angular/platform-browser';
 import  '../styles.css';
 import { environment } from '../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -34,7 +35,7 @@ export class AppComponent {
 
   constructor(private dialog: MatDialog, public authService: AuthService,
                       private router: Router,public user: UserService,
-                      private titleService: Title) {
+                      private titleService: Title,private http:HttpClient) {
                   
                       }
  
@@ -42,7 +43,16 @@ export class AppComponent {
                       this.titleService.setTitle( newTitle );
                       window.scroll(0, 0);
                     }
-                   
+                    blogs =[];
+                    getBlogs(){
+                     return this.http.get<any>('https://dashboard.careernaksha.com/blogs?_sort=_id:ASC&_limit=4')
+                    }
+                    ngOnInit(){
+                      this.getBlogs().subscribe(data => {
+                        console.log("---data blogs---",data);
+                        this.blogs=data;
+                      })
+                    }
 
   showmessage(){
     this.thankmessage = true;

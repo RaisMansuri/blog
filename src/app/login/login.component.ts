@@ -4,6 +4,7 @@ import { AuthService } from '../auth.service';
 import * as jwt_decode from "jwt-decode";
 import { Title } from '@angular/platform-browser';
 import { environment } from './../../environments/environment';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -27,9 +28,10 @@ export class LoginComponent implements OnInit {
   }
 
 
-  constructor(private _router: Router,private _auth: AuthService, private titleService: Title) { 
+  constructor(private _router: Router,private _auth: AuthService, private titleService: Title, private meta:Meta) { 
  
-    this.setTitle('Login | Sign in | CareerNaksha ');
+    this.meta.updateTag({ name: 'description', content: 'Login to your career dashboard to build your profile and connect with the best mentor in your city'});
+    this.setTitle('Login to your career dashboard | Sign up');
 
   }
 

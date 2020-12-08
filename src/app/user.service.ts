@@ -23,7 +23,6 @@ export class UserService {
  
          login(){
             this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-            
          }
 
          logout(){

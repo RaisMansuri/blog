@@ -16,7 +16,6 @@ const hosturl = environment.hosturl;
 })
 export class AuthService {
 
-
   public socialdata = {
     name: "",
     email: "",
@@ -44,7 +43,7 @@ export class AuthService {
   private knowUrl = hosturl+"/api/know";
   private registerUrl = hosturl+"/api/register";
   private _recoverpwd = hosturl+"/api/recoverpwd";
-  private _resetpwd = hosturl+"/api/resetpwd/:link";
+  private _resetpwd =  "";
 
 
   
@@ -212,11 +211,14 @@ export class AuthService {
   }
 
   recoverpwd(user){
-      return this.http.post<any>(this._recoverpwd,user)
+    return this.http.post<any>(this._recoverpwd,user)
   }
 
   resetpwd(user){
-      return this.http.put<any>(this._resetpwd,user)
+    this._resetpwd = hosturl+"/api"+localStorage.getItem('link');  
+    console.log(" resetting password --_resetpwd link -->");
+    console.log(this._resetpwd);
+    return this.http.put<any>(this._resetpwd,user)
   }  
     
   registerUserSocial(user) {

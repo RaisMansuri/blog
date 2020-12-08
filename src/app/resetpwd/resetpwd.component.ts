@@ -4,6 +4,7 @@ import { AuthService } from '../auth.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { passValidator } from '../register-dialog/validator';
 import { Router } from '@angular/router';
+import { Token } from '@angular/compiler/src/ml_parser/lexer';
 @Component({
   selector: 'app-resetpwd',
   templateUrl: './resetpwd.component.html',
@@ -17,6 +18,9 @@ export class ResetpwdComponent implements OnInit {
   
   constructor(private _auth: AuthService,private fb: FormBuilder,private router:Router) {
     
+    let link=this.router.url
+    localStorage.setItem('link',link);
+
     this.form = this.fb.group({
 
       password:['', Validators.required],
@@ -37,6 +41,8 @@ export class ResetpwdComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this);
+    
     if (this.form.valid) {
      this.message="Password reset successful! please wait...redirecting to login page"
      this.resetpwd();
@@ -46,11 +52,14 @@ export class ResetpwdComponent implements OnInit {
   }
 
   resetpwd(){
-    this._auth.resetpwd(this.form.controls.password).subscribe(
+   
+    this._auth.resetpwd(this.form.value).subscribe(
       response => console.log(response),
+      
       err => console.log(err)
     );
     setTimeout(() => {
+     
       this.router.navigate(['/login']);
   }, 5000);
   }

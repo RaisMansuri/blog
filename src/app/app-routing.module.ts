@@ -5,7 +5,6 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { HomepageComponent } from './homepage/homepage.component';
-
 import { RegistrationComponent } from './registration/registration.component';
 import { AboutComponent } from './about/about.component';
 import { TestReportComponent } from './test-report/test-report.component';
@@ -27,12 +26,14 @@ import { GlobalVidhyaComponent } from './global-vidhya/global-vidhya.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { AuthGuard } from './auth.guard';
 import { AhmedabadComponent } from './ahmedabad/ahmedabad.component';
+import { VadodaraComponent } from './vadodara/vadodara.component';
+import { ResetpwdComponent } from './resetpwd/resetpwd.component';
 import { BlogComponent } from './blog/blog.component';
-import { DetailblogComponent } from './detailblog/detailblog.component';
-
+import { DetailblogComponent } from './detailblog/detailblog.component'
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  
   { path: 'register', component: RegisterComponent},
   {
     path: 'profile',
@@ -54,8 +55,8 @@ export const routes: Routes = [
     loadChildren: () => import('./roi/roi.module').then(m => m.RoiModule)
 
   },
-
   { path: 'privacy-policy', component:PrivacyComponent },
+  { path: 'resetpwd/:token', component:ResetpwdComponent },
   { path: 'gallery', component:GalleryComponent},
   { path: 'gallery/schools', component:SchoolsComponent},
   { path: 'gallery/college', component:CollegeComponent},
@@ -71,8 +72,8 @@ export const routes: Routes = [
   { path:'experts', component:ExpertsComponent},
   { path:'globalvidhya', component:GlobalVidhyaComponent },
   { path:'products/globalvidhya', component:GlobalVidhyaComponent},
-  {path: 'best-career-counselling-in-ahmedabad-gujarat', component:AhmedabadComponent},
-
+  { path: 'best-career-counselling-in-ahmedabad-gujarat', component:AhmedabadComponent},
+  { path: 'best-career-counselling-baroda-vadodara-gujarat', component:VadodaraComponent},
   { path: 'quiz', component:QuizComponent,canActivate:[AuthGuard]},
   {path: '**', redirectTo: ''},
 

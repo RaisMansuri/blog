@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Meta } from '@angular/platform-browser';
-import { Title, MetaDefinition } from '@angular/platform-browser';
-import { UpperCasePipe } from '@angular/common';
-import { $ } from 'protractor';
+import { Title} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-detailblog',
@@ -24,6 +23,7 @@ export class DetailblogComponent implements OnInit {
   blog_seoimageurl = '';
   blog_seokeyword = '';
   blog_seotitle = '';
+  userData: any;
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private meta: Meta, private titleService: Title) {
   }
@@ -33,7 +33,6 @@ export class DetailblogComponent implements OnInit {
   }
   ngOnInit(): void {
     this.url = this.route.snapshot.params.blog_url;
-    // this.url1 = this.url.toUpperCase();
     this.id = this.route.snapshot.params.id;
     this.getDetailBlog().subscribe(data => {
       console.log('---data blog detail---', data);
@@ -43,8 +42,8 @@ export class DetailblogComponent implements OnInit {
       this.author = data.blog_author;
       this.date = data.blog_date;
       this.blog_seodetail = data.blog_seodetail;
-      this.subimageUrl = `https://dashboard.careernaksha.com${data.blog_image.url}`;
-
+      this.subimageUrl = `https://dashboard.careernaksha.com${data.blog_subimage.url}`;
+//https://dashboard.careernaksha.com
       this.blog_seokeyword = data.blog_seokeyword;
       this.blog_seoimageurl = data.blog_seoimageurl;
       this.blog_seotitle = data.blog_seotitle;
@@ -57,9 +56,13 @@ export class DetailblogComponent implements OnInit {
       this.setTitle(this.blog_seotitle);
 
     });
+
+   
   }
   public setTitle( blog_seotitle: string) {
     this.titleService.setTitle(blog_seotitle);
     window.scroll(0, 0);
   }
+
+  
 }

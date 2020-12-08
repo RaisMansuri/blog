@@ -4,7 +4,7 @@ import { AuthService } from '../auth.service';
 import { MatDialogRef, MatDialog,MatDialogConfig } from '@angular/material/dialog';
 import { RegisterDialogComponent } from '../register-dialog/register-dialog.component';
 import * as jwt_decode from "jwt-decode";
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { environment } from './../../environments/environment';
 import { RecoverpwdDialogComponent } from '../recoverpwd-dialog/recoverpwd-dialog.component';
 
@@ -33,7 +33,11 @@ export class LoginDialogComponent implements OnInit {
   showError = false
   errorMsg=""
   constructor(private dialog: MatDialog, public dialogRef: MatDialogRef<LoginDialogComponent>,
-              private _router: Router,private _auth: AuthService,private titleService: Title) { }
+              private _router: Router,private _auth: AuthService,private titleService: Title,private meta:Meta) { 
+
+                this.meta.updateTag({ name: 'description', content: 'Login to your career dashboard to build your profile and connect with the best mentor in your city'});
+                this.setTitle('Login to your career dashboard | Sign up');
+              }
 
   ngOnInit() {
   }

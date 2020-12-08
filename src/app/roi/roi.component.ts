@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { environment } from './../../environments/environment';
+import { Meta } from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
 
 export interface Time {
   value: string;
@@ -126,7 +128,11 @@ warn=""
   esum="";
  interest=1;
   
-  constructor(private router: Router) { 
+  constructor(private router: Router, private meta: Meta, private titleService: Title) { 
+
+    this.meta.addTag({ name: 'description', content: 'Calculate return on your educational investment (ROI) using our calculator online.'});
+    this.setTitle('Find return on your educational investment | ROI calculator ');
+
 
     this.earsumroi = localStorage.getItem('earsum');
     this.expsumroi = localStorage.getItem('expsum');
@@ -135,6 +141,10 @@ warn=""
   ngOnInit() {
   }
 
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
+    window.scroll(0, 0);
+  }
 
    gencost(){
 

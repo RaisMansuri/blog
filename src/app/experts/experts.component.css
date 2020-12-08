@@ -13,7 +13,7 @@
   width: 47%;
   padding: 0 10px;
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 7px;
 }
 
 .row {  margin-left: 5%;}
@@ -37,8 +37,9 @@
   background-color: #ffffff;
   border-radius: 10px;
    border: 1px solid black;
-   height: 375px;
+   height: 370px;
    width: auto;
+   margin-right: 15px;
 }
 .card1 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); 
@@ -91,14 +92,15 @@
   background: none;
   background-color: rgb(1,167,157);
   color:#fff;
-  width: 230px;
+  width: 210px;
   height: 36px;
   padding: 6px;
   cursor: pointer;
   font-weight: bold;
   outline: none;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 5%;
+  border-radius: 5px;
 }
 .pokl {
   margin-right: 15px;
@@ -137,15 +139,17 @@
     display: block;
     margin-bottom: 20px;
     margin-left: 0px;
+    margin-right: 10px;
   }
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); 
     text-align: left;
     background-color: #ffffff;
     border-radius: 10px;
      border: 1px solid black;
      height: auto;
      width: auto;
+     margin-right: 13px;
   }
   .expert-detail{
     color: rgb(0, 0, 0);
@@ -167,7 +171,7 @@
       background: none;
       background-color: rgb(1,167,157);
       color:#fff;
-      width: 230px;
+      width: 210px;
       height: 36px;
       padding: 6px;
       cursor: pointer;
@@ -175,7 +179,8 @@
       outline: none;
       margin-top: 5px;
       margin-left: 5%;
-      margin-bottom: 3%;
+      margin-bottom: 5%;
+      border-radius: 5px;
     }
 
 
@@ -185,11 +190,11 @@
   }
   
   .intro1 {
-    margin-left: 0.5%;
+    margin-left: -8px;
     font-size: 25px;
   }
   .intro2 {
-    margin-left: 0.5%;
+    margin-left: -8px;
     font-size: 18px;
   }
   .intro3 {

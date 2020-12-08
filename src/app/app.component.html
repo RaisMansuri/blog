@@ -1,8 +1,8 @@
-
+<!DOCTYPE html>
  
- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transparent" style="background-color: white !important; opacity: 0.92 !important; padding: 0; padding-left: 2em;z-index: 1;">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transparent" style="background-color: white !important; opacity: 0.92 !important; padding: 0; padding-left: 2em;z-index: 1;" alt="img">
   <a class="navbar-brand" href="/" (click)="setTitle('Online Career Counselling, Guidance | Career Counselor, Consultant in India')">
-    <img src="{{cdnHost}}/assets/images/logo.png" style="max-height: 3em; margin-left: 40%;z-index: 1;" class="img-responsive">
+    <img src="{{cdnHost}}/assets/images/logo.png" style="max-height: 3em; margin-left: 40%;z-index: 1;" class="img-responsive" alt="img">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -98,9 +98,8 @@
 <br>
         <p style="color:#fff;"><a href="/best-career-counselling-in-ahmedabad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ahmedabad</i></a> | <a href="/best-career-counselling-baroda-vadodara-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Vadodara</i></a> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Anand</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bhavnagar</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Gandhinagar</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Rajkot</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Surat</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bharuch</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ankleshwar</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Nadiad</i></p>
         </div>
-  
-
     </div>
+
     <div class="col-md-3 contact-div">
  
         <div class="row"> 
@@ -129,85 +128,87 @@
          </div>
     </div>
   
-    <div class="col md-4 blog-col">
+    <div class="col md-4 blog-col"   >
  
-       <div style="text-align:center;"><h5 style="color:rgb(0,167,157);font-weight:800;">Latest Blog Articles</h5></div>
-       <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><p class="footer-para"> <a href="/blogs/career-corporate-trainer-customer-support-school-teaching" (click)="scroll()" style="color:#fff;text-decoration:none;" > The power of my sanguine disposition in a competitive world</a> </p></div>
-       <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><p class="footer-para"> <a href="/blogs/career-youth-politics-public-relations-elections-life-vision-university" (click)="scroll()" style="color:#fff;text-decoration:none;" >Sheer grit and honesty is what it takes to get through elections and life</a> </p></div>
-       <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><p class="footer-para"> <a href="/blogs/career-ngo-social-activism-talent-development-villages-education-skills" (click)="scroll()" style="color:#fff;text-decoration:none;" >Scope of talent development in nearby villages & city outskirts gave Sachin a social purpose</a> </p></div>
-       <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><p class="footer-para"> <a href="/blogs/career-csr-social-work-ngo-consultant-adverse-learning" (click)="scroll()" style="color:#fff;text-decoration:none;" >Adverse circumstances can never block you from learning and growing in social work</a> </p></div>
-       <div style="text-align:center;">
-         <a (click)="setTitle('Blog Articles | CareerNaksha')" href="/blogs"> <button class="more" style="background-color:rgb(0,167,157);color:#fff;border:none;width:152px;border-radius:2px;font-weight:600;">More Articles</button></a>
-       </div>
-      
-    </div>
+      <div style="text-align:center;"><h5 style="color:rgb(0,167,157);font-weight:800;">Latest Blog Articles</h5></div>
+      <div class="col-md-13" *ngFor="let blog of blogs" >
+      <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><a href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h6 class="card-title" style="color:rgb(255, 255, 255);font-size:15px;">  {{blog["blog_title"]}}</h6></a></div>
+      </div>
+      <div style="text-align:center;">
+        <a (click)="setTitle('Blog Articles | CareerNaksha')" href="/blogs"> <button class="more" style="background-color:rgb(0,167,157);color:#fff;border:none;width:152px;border-radius:2px;font-weight:600;">More Articles</button></a>
+      </div>
+     
+   </div>
   </div>
 <br>
 <hr>
 
-  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-    <div class="card-body">
-      Choosing and pursuing the right career path is one of the key decisions every student needs to make. Adopting a scientific approach which is well researched and thought through is critical for making this decision. The pace at which careers are evolving and traditional career paths are losing the edge, it is essential that students increase their awareness and take decisions which are future proof!
-    </div>
+<div id="collapseOne" class="collapse show"  data-parent="#accordionExample">
+  <div class="footerdetail">
+    Choosing and pursuing the right career path is one of the key decisions every student needs to make. Adopting a scientific approach which is well researched and thought through is critical for making this decision. The pace at which careers are evolving and traditional career paths are losing the edge, it is essential that students increase their awareness and take decisions which are future proof!
   </div>
-  
-  
-  
-  <div id="collapsetwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-    <div class="card-body">
-  <h3>About 'CareerNaksha'</h3>
-     <p> ‘CareerNaksha’ is an ed-tech startup based out of Vadodara, Gujarat (incubated at MS University, Baroda) run by alumni from IITs, IIMs, IIMC, NITs & MSU along with world’s leading career psychologists, HR professionals & Industry experts. CareerNaksha, is the first incubatee startup, that has been incubated at Center for Incubation, Office of Career Advancement for Students, Maharaja Sayajirao University (MSU), Vadodara is recognized under Startup India Initiative and registered under the Companies Act of 2012. </p>
-  <p>CareerNaksha provides modern personalized, data-driven, psychometrics based career counselling & development platform to school & college students, graduates and early professionals. They also conduct hands-on workshops, seminars for students to prepare for market skills like AI, ML, UI-UX Design, Digital Marketing, Communication Skills, and Social Emotional Learning (HOTS) etc. Every year their event GlobalVidhya provides opportunities for students to seek guidance on abroad studies, overseas education and application assistance at very affordable pricing compared to market. They have their own website, android app & social media handles to provide direct access to their counselling services in real-time.</p>
-  
-  <p>Using our platform and products students can discover their unique career potential and can take well-informed career decisions. We leverage statistics and AI technology along with scientific research to provide unbiased career options. The psychometric aptitude assessment career test is based on 5-Dimensions (personality, behaviour, aptitude, skills, workstyles) which enables personalized career counselling using data analysis.
-  </p>
-    </div>
-  </div>
-
-  <div id="collapsethree" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-    <div class="card-body">
-      <h3>What Is Career Counselling?</h3>
-      <p>Career Counselling is the process of giving advice, support and guidance for selecting the right career path for example right career stream after class 10th, the right degree, college after 12th and right career path during or after graduation. Career confusion and indecision can affect you at any stage of your career, thus it is important to get the right support to resolve it and plan ahead. CareerNaksha's Experts & Career Counsellors let you explore different career options, their scope, colleges and opportunities, and help you make the right career choice. With a team of career counsellors from IITs, IIMs and India’s leading psychologists, you can rest assured that you’ll get the most reliable advice and guidance for your career.
-      </p>
-    </div>
-  </div>
+</div>
 
 
-<div id="collapsefour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-  <div class="card-body">
-    <h3>What Are Psychometric Assessment Career Tests?</h3>
-    <p>A Psychometric Assessment is a test designed to understand where your unique set of strengths, aptitudes and skills lie, in order to recommend the right careers for you. The CareerNaksha Career Assessment is an online career test that evaluates 5 dimensions including Personality, Aptitude, Interest, Skills, Knowledge and Work Style, to suggest career options. It is well researched test based on O*NET International Career Framework. Not only that, you get detailed career development plans, list of colleges, career paths and expert guidance with the 10+ page detailed career report, so you can take the first step towards achieving your career goals. Specifically built for the Indian population, the CareerNaksha career assessment understands you better to help you make the most accurate and well-informed career decisions.
+
+<div id="collapsetwo" class="collapse show"  data-parent="#accordionExample">
+  <div class="footerdetail">
+    
+<h3 data-toggle="collapse" data-target="#collapseExample"
+aria-expanded="false" aria-controls="collapseExample" >About 'CareerNaksha'</h3>
+<div class="collapse" id="collapseExample">
+   <p> ‘CareerNaksha’ is an ed-tech startup based out of Vadodara, Gujarat (Incubated at MS University, Baroda) run by alumni from IITs, IIMs, IIMC, NITs & MSU along with world’s leading career psychologists, HR professionals & Industry experts. CareerNaksha, is the first incubatee startup, that has been incubated at Center for Incubation, Office of Career Advancement for Students, Maharaja Sayajirao University (MSU), Vadodara is recognized under Startup India Initiative and registered under the Companies Act of 2012. </p>
+<p>CareerNaksha provides modern personalized, data-driven, psychometrics based career counselling & development platform to school & college students, graduates and early professionals. They also conduct hands-on workshops, seminars for students to prepare for market skills like AI, ML, UI-UX Design, Digital Marketing, Communication Skills, and Social Emotional Learning (HOTS) etc. Every year their event GlobalVidhya provides opportunities for students to seek guidance on abroad studies, overseas education and application assistance at very affordable pricing compared to market. They have their own website, android app & social media handles to provide direct access to their counselling services in real-time.</p>
+
+<p>Using our platform and products students can discover their unique career potential and can take well-informed career decisions. We leverage statistics and AI technology along with scientific research to provide unbiased career options. The psychometric aptitude assessment career test is based on 5-Dimensions (personality, behaviour, aptitude, skills, workstyles) which enables personalized career counselling using data analysis.
+</p>
+</div>
+  </div>
+</div>
+
+<div id="collapsethree" class="collapse show"  data-parent="#accordionExample">
+  <div class="footerdetail">
+    <h3 data-toggle="collapse" data-target="#collapseExample1"
+    aria-expanded="false" aria-controls="collapseExample" >What Is Career Counselling?</h3>
+    <p class="collapse" id="collapseExample1">Career Counselling is the process of giving advice, support and guidance for selecting the right career path for example right career stream after class 10th, the right degree, college after 12th and right career path during or after graduation. Career confusion and indecision can affect you at any stage of your career, thus it is important to get the right support to resolve it and plan ahead. CareerNaksha's Experts & Career Counsellors let you explore different career options, their scope, colleges and opportunities, and help you make the right career choice. With a team of career counsellors from IITs, IIMs and India’s leading psychologists, you can rest assured that you’ll get the most reliable advice and guidance for your career.
     </p>
   </div>
 </div>
 
-<div id="collapsefour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-  <div class="card-body">
-    <h3>What Is Career Guidance?</h3>
-        <p>Career Guidance takes the benefits of psychometric career assessments and career counselling to the next level. It is the process where a career expert helps you on your path to career development and career success. Being successful in a career takes extensive efforts, and with an experienced coach/mentor, your career development efforts can find the right direction. CareerNaksha Career counsellors provide career guidance by building customized career action plans and road map, direct you back to the right path, provide personalized 24x7 support, and help you at every step along the way to a successful career. Such extensive support can definitely help you go a long way in your career!
-    </p>
-  </div>
-</div>
-
-<div id="collapsefour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-  <div class="card-body">
-    <p>Career Counselling in India via CareerNaksha both offline & online modes
-      Our range of experts and personalised career guidance services are accessible to students and graduates from all across India. For students looking for career counselling in Gujarat cities like Vadodara, Ahmedabad, Surat, Bharuch, Ankleshwar, Gandhinagar, we offer our counselling sessions face-to-face, while the same sessions are held in the online mode (through video chat/telephone/skype/whatsapp) for people residing in the rest of India. The quality of delivery and support is maintained exactly same in both online and offline forms.
+<div class="footerdetail">
+  <h3 data-toggle="collapse" data-target="#collapseExample2"
+  aria-expanded="false" aria-controls="collapseExample" >What Are Psychometric Assessment Career Tests?</h3>
+  <p class="collapse" id="collapseExample2">A Psychometric Assessment is a test designed to understand where your unique set of strengths, aptitudes and skills lie, in order to recommend the right careers for you. The CareerNaksha Career Assessment is an online career test that evaluates 5 dimensions including Personality, Aptitude, Interest, Skills, Knowledge and Work Style, to suggest career options. It is well researched test based on O*NET International Career Framework. Not only that, you get detailed career development plans, list of colleges, career paths and expert guidance with the 10+ page detailed career report, so you can take the first step towards achieving your career goals. Specifically built for the Indian population, the CareerNaksha career assessment understands you better to help you make the most accurate and well-informed career decisions.
   </p>
-  </div>
 </div>
 
 
+<div id="collapsefour" class="collapse show"  data-parent="#accordionExample">
+<div class="footerdetail">
+  <h3 data-toggle="collapse" data-target="#collapseExample4"
+  aria-expanded="false" aria-controls="collapseExample" >What Is Career Guidance?</h3>
+      <p class="collapse" id="collapseExample4">Career Guidance takes the benefits of psychometric career assessments and career counselling to the next level. It is the process where a career expert helps you on your path to career development and career success. Being successful in a career takes extensive efforts, and with an experienced coach/mentor, your career development efforts can find the right direction. CareerNaksha Career counsellors provide career guidance by building customized career action plans and road map, direct you back to the right path, provide personalized 24x7 support, and help you at every step along the way to a successful career. Such extensive support can definitely help you go a long way in your career!
+  </p>
+</div>
+</div>
 
-  <div class="row" style="margin-top:25px;">
-    <div class="col-md-12" style="border-top:1px grey solid;padding-top:25px;" align="center">
-      <ul>
-         <li style="color:#fff;">Copyright@2020 CareerNaksha |</li>
-         <li><a style="color:#fff;" href="/privacy-policy">Privacy Policy</a></li>
-       </ul>
+<div id="collapsefive" class="collapse show"  data-parent="#accordionExample">
+<div class="footerdetail">
+  <h3 data-toggle="collapse" data-target="#collapseExample3"
+  aria-expanded="false" aria-controls="collapseExample" >Career Counselling in India via CareerNaksha both offline & online modes</h3>
+  <p class="collapse" id="collapseExample3">Our range of experts and personalised career guidance services are accessible to students and graduates from all across India. For students looking for career counselling in Gujarat cities like Vadodara, Ahmedabad, Surat, Bharuch, Ankleshwar, Gandhinagar, we offer our counselling sessions face-to-face, while the same sessions are held in the online mode (through video chat/telephone/skype/whatsapp) for people residing in the rest of India. The quality of delivery and support is maintained exactly same in both online and offline forms.
+</p>
+</div>
+</div>
+<hr>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="fot col-md-12" style="text-align: center;">
+     
+         <p style="color:#fff;">Built with ❤️ in India | CareerNaksha Copyrights 2020 @Realtime Data Analysis Pvt. Ltd.</p>
+         <a style="color:#fff;" href="/privacy-policy">Privacy Policy</a>
+     
     </div>
   </div>
-
-
   
 </footer>

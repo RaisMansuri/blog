@@ -9,6 +9,8 @@ import { Title } from '@angular/platform-browser';
 import { environment } from './../../environments/environment';
 import { Meta } from '@angular/platform-browser';
 import * as $ from 'jquery';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-homepage',
@@ -24,12 +26,17 @@ export class HomepageComponent implements OnInit {
 
 
   constructor(private dialog: MatDialog, private authService: AuthService, 
-    private router: Router,public user: UserService, private titleService: Title,public meta: Meta) {
+    private router: Router,public user: UserService, private titleService: Title,public meta: Meta,private http:HttpClient) {
 
       this.meta.updateTag({ name: 'description', content: 'Online career counselling & guidance using advance research-based career test & top counsellors for school students, college students, graduates and professionals'});
     this.meta.updateTag({ name: 'keywords', content: ' online, career test, career counselling, career guidance, counsellor, school, college, graduates, students, professionals' });
     this.setTitle('Online Career Counselling, Guidance | Career Test | Counsellor')
 
+    }
+
+    blogs =[];
+    getBlogs(){
+     return this.http.get<any>('https://dashboard.careernaksha.com/blogs?_sort=_id:ASC&_limit=2')
     }
 
   ngOnInit() {
@@ -65,6 +72,10 @@ $(window).scroll(function() {
   }
 
 });
+this.getBlogs().subscribe(data => {
+  console.log("---data blogs---",data);
+  this.blogs=data;
+})
   }
 
                       public setTitle( newTitle: string) {

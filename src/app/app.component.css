@@ -37,12 +37,7 @@ li{
 	font-weight: 800;
 }
 .nav-item:hover{
-	background-color: rgb(0,167,157);
 	color:rgb(0,167,157)!important;
-	
-	
-
-
 }
 .nav-link{
 	color:rgb(0,167,157)!important;
@@ -50,10 +45,11 @@ li{
 	font-family:'Raleway','sans-serif';
 }
 .nav-link:hover{
-	color:rgb(255, 255, 255)!important;
+	transform: translateY(-3px) scale(1.09);
+	color:rgb(0,167,157)!important;
 }
 #footer{
-	padding-top:65px;
+	padding-top:55px;
     height:auto;
    margin-right: 0px;
 	background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/Footer.jpg"); 
@@ -66,6 +62,13 @@ li{
 	  font-family:'Raleway',sans-serif ;
 	  color:#fff;
 	  
+}
+
+
+
+.fot{
+	padding-top:20px; 
+	margin-bottom: 15px;
 }
 textarea::placeholder{
 	color:#fff;
@@ -105,6 +108,7 @@ button{
 	.navbar-toggler{
 		margin-right: 27px;
 	}
+
 	.dropdown-center{
 		padding-right: 35px;
 	}
@@ -175,10 +179,12 @@ button{
    .review-stars ul li i.inactive { color: #c6c6c6;}
    .star:after { content: "\2605"; }
 
-.card-body{
+.footerdetail{
 	color: white;
-	font-size: auto;
+	margin-bottom: 30px;
+	cursor: pointer;
 }
+
 
 hr {
 	display: block;
@@ -189,3 +195,5 @@ hr {
 	border-style: inset;
 	border-width: 1px;
   }
+
+ 

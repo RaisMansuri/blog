@@ -42,7 +42,7 @@ export class TuformdetailsComponent implements OnInit {
     { value: '', viewValue: '-Select-' },
     { value: 'summary', viewValue: 'Summary Report' },
     { value: 'detailReport', viewValue: 'Detail Report' },
-    { value: 'detailReportCouncelling', viewValue: 'Detail Report + Councelling' }
+    { value: 'detailReportCouncelling', viewValue: 'Detail Report + Counselling' }
   ];
 
   form = new FormGroup({

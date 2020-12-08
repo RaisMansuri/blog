@@ -1,8 +1,9 @@
 .paratwo{
     color: rgb(0,167,157);
     margin-top:-15px;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 600;
+    text-align: center;
   }
   .spantwo{
     font-weight: 800;
@@ -68,4 +69,298 @@
   padding: 6px;
   cursor: pointer;
   font-weight: bold;
+}
+
+
+/*****************************Carusal**********************/
+
+.media-carousel 
+{
+  margin-bottom: 0;
+  padding: 0 40px 30px 40px;
+  margin-top: 30px;
+}
+/* Previous button  */
+.media-carousel .carousel-control.left 
+{
+  left: -12px;
+  background-image: none;
+  background: none repeat scroll 0 0 #222222;
+  border: 4px solid #FFFFFF;
+  border-radius: 23px 23px 23px 23px;
+  height: 40px;
+  width : 40px;
+  margin-top: 30px
+}
+/* Next button  */
+.media-carousel .carousel-control.right 
+{
+  right: -12px !important;
+  background-image: none;
+  background: none repeat scroll 0 0 #222222;
+  border: 4px solid #FFFFFF;
+  border-radius: 23px 23px 23px 23px;
+  height: 40px;
+  width : 40px;
+  margin-top: 30px
+}
+/* Changes the position of the indicators */
+.media-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.media-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+.media-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+.media-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+.mobile {
+  display: none;
+}
+@media all and (max-width:767px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+/********************school css******************************/
+
+.logo2{
+  width:80px;height:80px; margin-left: 20px;
+}
+.logo3{
+  width:67.46px;
+  height:80px; margin-left: 20px;
+}
+.logo4{
+  width:85.52px;height:80px; margin-left: 20px;
+}
+
+.logo6{
+  width:259.54px;height:80px; margin-left: 20px;
+}
+
+.logo8{
+  width:80px;height:80px; margin-left: 20px;
+}
+.logo9{
+  width:74.04px;height:80px; margin-left: 20px;
+}
+.logo10{
+  width:80px;height:80px; margin-left: 20px;
+}
+.logo11{
+  width:94.11px;height:80px; margin-left: 20px;
+}
+.logo12{
+  width:80px;height:80px; margin-left: 20px;
+  
+}
+
+/***********************************collage css*******************************/
+
+.col1{
+  width:80px;height:80px; margin-left: 20px;
+}
+.col2{
+  width:80px;height:80px; margin-left: 20px;
+}
+.col3{
+  width:80px;height:80px; margin-left: 20px;
+}
+.col4{
+  width:80px;height:60px; margin-left: 20px;
+}
+
+.col5{
+  width:80px;height:80px; margin-left: 20px;
+}
+.col6{
+  width:80px;height:80px; margin-left: 20px;
+}
+.col7{
+  width:80px;height:80px; margin-left: 20px;
+}
+.col8{
+  width:80px;height:80px; margin-left: 20px;
+}
+
+/**********************************corporates CSS***********************/
+.c1{
+  margin-left: 25px;
+  width: 101.6px;
+  height: 80px;
+}
+.c2{
+ margin-left: 25px;
+  width: 170.6px;
+  height: 80px;
+}
+
+.c3{
+ margin-left: 25px;
+  width: 106.6px;
+  height: 80px;
+}
+
+.c4{
+ margin-left: 25px;
+  width: 80px;
+  height: 80px;
+}
+
+.c5{
+ margin-left: 25px;
+  width: 80px;
+  height: 80px;
+}
+
+/******************************NGOs CSS****************************/
+
+.N1{
+  margin-left: 25px;
+  width: 142.2px;
+  height: 80px;
+}
+
+.N2{
+  width: 165.1px;
+  height: 80px;
+}
+
+.N3{
+  margin-left: 25px;
+  width: 80px;
+  height: 80px;
+}
+
+.N4{
+  margin-left: 25px;
+  width: 86.07px;
+  height: 80px;
+}
+
+.N5{
+  margin-left: 25px;
+  width: 57.18px;
+  height: 80px;
+}
+
+.carousel-item{
+
+  padding-bottom: 7px;
+}
+
+/********************************Startups CSS*****************************************/
+
+.S1{
+  margin-left: 25px;
+  width: 93.18px;
+  height: 80px;
+}
+
+.S2{
+  margin-left: 25px;
+  width: 80.03px;
+  height: 80px;
+}
+
+.S3{
+  margin-left: 25px;
+  width: 113.08px;
+  height: 80px;
+}
+
+.S4{
+  margin-left: 10px;
+  width: 160.04px;
+  height: 40px;
+}
+
+.S5{
+  width: 150.46px;
+  height: 70px;
+}
+
+.S6{
+  
+  width: 142.17px;
+  height: 80px;
+}
+
+
+/*****************************Media Coverage CSS*********************/
+
+.M1{
+  width: 100px;
+  height: 70px;
+}
+
+
+.M2{
+  margin-left: 10px;
+  width: 170.6px;
+  height: 50px;
+}
+
+
+.M3{
+  margin-left: 20px;
+  width: 110px;
+  height: 65px;
+}
+
+
+.M4{
+  margin-left: 15px;
+  width: 158.1px;
+  height: 65px;
+}
+
+
+.M5{
+  margin-left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+
+.M6{
+  margin-left: 25px;
+  width: 72.59px;
+  height: 80px;
+}
+
+/***************************Recognized by CSS**********************/
+
+.R1{
+
+  width: 261.8px;
+  height: 60px;
+}
+
+.R2{
+
+  width: 142.2px;
+  height: 80px;
+}
+
+.R3{
+  width: 175.18px;
+  height: 80px;
 }

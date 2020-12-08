@@ -3,6 +3,7 @@ import { AuthService } from '../auth.service';
 import { Router} from '@angular/router';
 import * as jwt_decode from "jwt-decode";
 import { environment } from './../../environments/environment';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -20,12 +21,19 @@ export class RegisterComponent implements OnInit {
     password:""
   }
 
-  constructor(private _auth: AuthService,
-    private _router: Router) { }
+  constructor(private _auth: AuthService,private _router: Router,private meta: Meta, private titleService: Title) { 
+
+    this.meta.updateTag({ name: 'description', content: 'Join and register online at our website to seek career guidance and counselling. You can setup an appointment with our counsellor or expert.' });
+    this.setTitle('Register online - offline to get career counselling & guidance | Setup appointment');
+    }
 
   ngOnInit() {
   }
 
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
+    window.scroll(0, 0);
+  }
 
   getDecodedAccessToken(token: string): any {
     try{
