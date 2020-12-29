@@ -1,8 +1,8 @@
 <!DOCTYPE html>
  
- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transparent" style="background-color: white !important; opacity: 0.92 !important; padding: 0; padding-left: 2em;z-index: 1;" alt="img">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transparent" style="background-color: white !important; opacity: 0.92 !important; padding: 0; padding-left: 2em;z-index: 1;">
   <a class="navbar-brand" href="/" (click)="setTitle('Online Career Counselling, Guidance | Career Counselor, Consultant in India')">
-    <img src="{{cdnHost}}/assets/images/logo.png" style="max-height: 3em; margin-left: 40%;z-index: 1;" class="img-responsive" alt="img">
+    <img src="{{cdnHost}}/assets/images/logo.png" style="max-height: 3em; margin-left: 40%;z-index: 1;" class="img-responsive" >
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
     <ul class="navbar-nav ml-auto" style="height:100%;">
       
         <li class="nav-item px-3 head-link">
-            <a class="nav-link"  style="color:#1b75bb;font-weight:600;z-index: -1;" aria-controls="navbarNav" (click)="setTitle('Online Career Counseling | Personal Counselor | Personality Assessment | Guidance India USA');collapseNav()" href="/homepage">Home </a>
+            <a class="nav-link"   aria-controls="navbarNav" (click)="setTitle('Online Career Counseling | Personal Counselor | Personality Assessment | Guidance India USA');collapseNav()" href="/homepage">Home </a>
           </li>
           
           <li class="nav-item px-3 head-link">
@@ -20,31 +20,30 @@
           </li>
 
           <li class="nav-item px-3 head-link">
-            <a class="nav-link"  style="color: #1b75bb;font-weight:600;" aria-controls="navbarNav" (click)="collapseNav()" href="products/globalvidhya">GlobalVidhya</a>
-
+            <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="products/globalvidhya">GlobalVidhya</a>
           </li>
 
         <li class="nav-item px-3 head-link">
-            <a class="nav-link"  style="color: #1b75bb;font-weight:600;" aria-controls="navbarNav" (click)="collapseNav()" href="/about">About Us</a>
+            <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="/about">About Us</a>
            
         </li>
          
         <li class="nav-item px-3 head-link">
-            <a class="nav-link" style="color: #1b75bb;font-weight:600;cursor:pointer;"  aria-controls="navbarNav" (click)="collapseNav()" href="/products">Products</a>
+            <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="/products">Products</a>
           </li>
       <li class="nav-item px-3 head-link">
-        <a class="nav-link"  style="color: #1b75bb;font-weight:600;" aria-controls="navbarNav" (click)="collapseNav()" href="/blogs">Blog</a>
+        <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="/blogs">Blog</a>
       </li>
       <li class="nav-item px-3 head-link">
-        <a class="nav-link"  style="color: #1b75bb;font-weight:600;" aria-controls="navbarNav" (click)="collapseNav()" href="/gallery">Gallery</a>
+        <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="/gallery">Gallery</a>
       </li>
 
       <li class="nav-item head-link login-list" *ngIf="!authService.loggedIn()">
-        <a class="nav-link" style="color: #1b75bb;cursor:pointer;font-weight:600;" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" (click)="openLoginDialog()">Login/Register</a>
+        <a class="nav-link"  data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" (click)="openLoginDialog()">Login/Register</a>
       </li>
 
         <li class="nav-item head-link login-list" *ngIf="authService.loggedIn()">
-        <a class="nav-link" style="color: #1b75bb;cursor:pointer;font-weight:600;" (click)="collapseNav()" href="/profile">Profile</a>
+        <a class="nav-link"  (click)="collapseNav()" href="/profile">Profile</a>
       </li>
 
       <li class="nav-item head-link dropdown login-list" *ngIf="authService.loggedIn()">
@@ -86,7 +85,7 @@
                   <li><a href="https://www.facebook.com/careernaksha"><i style="color:rgb(255, 255, 255);font-size:20px;" class="fab fa-facebook-f"></i></a></li>
                   <li><a href="https://twitter.com/careernaksha"><i style="color:rgb(255, 255, 255);font-size:20px;" class="fab fa-twitter"></i></a></li>
                   <li><a href="https://www.instagram.com/careernaksha"><i style="color:rgb(255, 255, 255);font-size:20px;" class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/careernaksha"><i style="color:rgb(255, 255, 255);font-size:20px;" class="fab fa-youtube" target="_blank" rel="noopener"></i></a></li>
+                  <li><a href="https://www.youtube.com/careernaksha"><i style="color:rgb(255, 255, 255);font-size:20px;" class="fab fa-youtube" rel="noopener"></i></a></li>
                 </ul>
           </div>
          
@@ -96,7 +95,7 @@
           <h5 style="color:rgb(0,167,157);font-weight:800;">Available Offline & Online in English | Hindi | Gujarati</h5>
 
 <br>
-        <p style="color:#fff;"><a href="/best-career-counselling-in-ahmedabad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ahmedabad</i></a> | <a href="/best-career-counselling-baroda-vadodara-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Vadodara</i></a> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Anand</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bhavnagar</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Gandhinagar</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Rajkot</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Surat</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bharuch</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ankleshwar</i> | <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Nadiad</i></p>
+        <p style="color:#fff;"><a href="/best-career-counselling-in-ahmedabad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ahmedabad</i></a> | <a href="/best-career-counselling-baroda-vadodara-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Vadodara</i></a> | <a href="/best-career-counselling-in-anand-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Anand</i></a> | <a href="/best-career-counselling-in-Bhavnagar-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bhavnagar</i></a> | <a href="/best-career-counselling-in-gandhinagar-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Gandhinagar</i></a> | <a href="/best-career-counselling-in-Rajkot-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Rajkot</i></a> | <a href="/best-career-counselling-in-surat-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Surat</i></a> | <a href="/best-career-counselling-in-bharuch-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bharuch</i> </a> |  <a href="/best-career-counselling-in-ankleshwar-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ankleshwar</i></a> | <a href="/best-career-counselling-in-nadiad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Nadiad</i></a></p>
         </div>
     </div>
 
@@ -132,13 +131,15 @@
  
       <div style="text-align:center;"><h5 style="color:rgb(0,167,157);font-weight:800;">Latest Blog Articles</h5></div>
       <div class="col-md-13" *ngFor="let blog of blogs" >
-      <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><a href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h6 class="card-title" style="color:rgb(255, 255, 255);font-size:15px;">  {{blog["blog_title"]}}</h6></a></div>
+      <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><a href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h6 class="card-title" style="color:rgb(255, 255, 255);font-size:15px;">  {{blog["blog_title"]}}</h6></a></div>
       </div>
-      <div style="text-align:center;">
-        <a (click)="setTitle('Blog Articles | CareerNaksha')" href="/blogs"> <button class="more" style="background-color:rgb(0,167,157);color:#fff;border:none;width:152px;border-radius:2px;font-weight:600;">More Articles</button></a>
+      <div style="text-align:center; text-decoration: none;">
+        <button class="more" (click)="setTitle('Blog Articles | CareerNaksha')" > <a style="text-decoration: none; color:#ffffff" href="/blogs"><!--<button class="more" style="">-->More Articles</a></button>
       </div>
      
    </div>
+
+
   </div>
 <br>
 <hr>
@@ -202,7 +203,62 @@ aria-expanded="false" aria-controls="collapseExample" >About 'CareerNaksha'</h3>
 </div>
 <hr>
 
-  <div class="row" style="margin-top:10px;">
+<div class="row" >
+  <div class="col-md-3"></div>
+ 
+  <div class="col-md-3"></div>
+ <div  class="col-md-12 desktop" style="padding-bottom: 0%; text-align: center;">
+  <img src="{{cdnHost}}/assets/images/homepage/footerimg/paytm.jpg" alt="" class="logo1">
+  <img src="{{cdnHost}}/assets/images/homepage/footerimg/visa.jpg" alt="" class="logo2">
+  <img src="{{cdnHost}}/assets/images/homepage/footerimg/mastercard.jpg" alt="" class="logo3">
+  <img src="{{cdnHost}}/assets/images/homepage/footerimg/razorpay.png" alt="" class="logo4">
+  <img src="{{cdnHost}}/assets/images/homepage/footerimg/gpay.png" alt="" class="logo5">
+  <img src="{{cdnHost}}/assets/images/homepage/footerimg/neft.gif" alt="" class="logo6">
+  <img src="{{cdnHost}}/assets/images/homepage/footerimg/imps.jpg" alt="" class="logo7">
+
+</div>
+
+
+<div class="mobile col-md-12">
+  <div  id="mycarousel2"  class="carousel slide carousel-multi-item"  data-ride="carousel" style="padding-bottom: 2%;  padding-left: 60px;">  
+    <div class="carousel-inner ">
+      <div class="carousel-item active ">
+        <img src="{{cdnHost}}/assets/images/homepage/footerimg/paytm.jpg" alt="" class="logo1">
+        <img src="{{cdnHost}}/assets/images/homepage/footerimg/visa.jpg" alt="" class="logo2">
+
+      </div>
+     
+ 
+      <div class="carousel-item">
+        <img src="{{cdnHost}}/assets/images/homepage/footerimg/mastercard.jpg" alt="" class="logo3">
+        <img src="{{cdnHost}}/assets/images/homepage/footerimg/razorpay.png" alt="" class="logo4">
+      </div>
+      <div class="carousel-item">
+        <img src="{{cdnHost}}/assets/images/homepage/footerimg/gpay.png" alt="" class="logo5">
+    <img src="{{cdnHost}}/assets/images/homepage/footerimg/neft.gif" alt="" class="logo6">
+      </div>
+      <div class="carousel-item">
+        <img src="{{cdnHost}}/assets/images/homepage/footerimg/imps.jpg" alt="" class="logo7">
+      </div>
+    </div>
+    <a  class="carousel-control-prev" href="#mycarousel2" role="button" data-slide="prev">
+      <span class="carousel-control-prev"  style="font-weight:900;color: rgb(0,167,157); font-size: 34px;"></span>
+      <span style="color:rgb(0,167,157);" class="sr-only">Previous</span>
+    </a>
+       <a  class="carousel-control-next" href="#mycarousel2" role="button" data-slide="next">
+         <span class="carousel-control-next" style="font-weight:900;color: rgb(0,167,157); font-size: 35px;" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+       </a>
+    </div>
+      <div class="col-md-2"></div>
+ </div>
+ </div>
+
+
+
+
+
+  <div class="row" style="margin-top:5px;">
     <div class="fot col-md-12" style="text-align: center;">
      
          <p style="color:#fff;">Built with ❤️ in India | CareerNaksha Copyrights 2020 @Realtime Data Analysis Pvt. Ltd.</p>

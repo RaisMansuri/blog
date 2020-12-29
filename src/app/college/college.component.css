@@ -17,14 +17,14 @@ body {
   margin-top: 70px;
   font-family: 'Droid Sans', sans-serif;
   font-weight: bold;
-  color: #58595a;
+  color: #000000;
 }
 
 .gallery-container p.page-description {
   text-align: center;
   margin: 30px auto;
   font-size: 18px;
-  color: #85878c;
+  color: #000000;
 }
 
 .tz-gallery {
@@ -39,6 +39,7 @@ body {
   border: none;
   transition: 0.15s ease-in-out;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+  
 }
 
 .tz-gallery .thumbnail:hover {
@@ -47,6 +48,7 @@ body {
 
 .tz-gallery .lightbox img {
   border-radius: 4px 4px 0 0;
+  height: 230px;
 }
 
 .tz-gallery .caption{
@@ -62,10 +64,13 @@ body {
 
 .tz-gallery .caption p {
   font-size: 12px;
-  color: #7b7d7d;
-  margin: 0;
+  color: #000000;
+  margin-top: 10px;
+  
 }
 
 .baguetteBox-button {
   background-color: transparent !important;
 }
+
+

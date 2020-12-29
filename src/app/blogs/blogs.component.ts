@@ -4,13 +4,12 @@ import { ActivatedRoute } from '@angular/router';
 import { Meta } from '@angular/platform-browser';
 import { Title} from '@angular/platform-browser';
 
-
 @Component({
-  selector: 'app-detailblog',
-  templateUrl: './detailblog.component.html',
-  styleUrls: ['./detailblog.component.css']
+  selector: 'app-blogs',
+  templateUrl: './blogs.component.html',
+  styleUrls: ['./blogs.component.css']
 })
-export class DetailblogComponent implements OnInit {
+export class BlogsComponent implements OnInit {
   id = '';
   title = '';
   url = ``;
@@ -29,31 +28,31 @@ export class DetailblogComponent implements OnInit {
   }
 
   getDetailBlog() {
-    return this.http.get<any>(`https://dashboard.careernaksha.com/blogs/${this.id}`);
+    return this.http.get<any>(`https://dashboard.careernaksha.com/blogs/?blog_url=${this.url}`);
   }
   ngOnInit(): void {
     this.url = this.route.snapshot.params.blog_url;
-    this.id = this.route.snapshot.params.id;
     this.getDetailBlog().subscribe(data => {
       console.log('---data blog detail---', data);
-      this.title = data.blog_title;
-      this.imageUrl = `https://dashboard.careernaksha.com${data.blog_image.url}`;
-      this.blogsubDetail = data.blog_subdetail ;
-      this.author = data.blog_author;
-      this.date = data.blog_date;
-      this.blog_seodetail = data.blog_seodetail;
-      this.subimageUrl = `https://dashboard.careernaksha.com${data.blog_subimage.url}`;
+      this.setTitle(data[0].blog_seotitle);
+      this.title = data[0].blog_title;
+      this.imageUrl = `https://dashboard.careernaksha.com${data[0].blog_image.url}`;
+      this.blogsubDetail = data[0].blog_subdetail ;
+      this.author = data[0].blog_author;
+      this.date = data[0].blog_date;
+      this.blog_seodetail = data[0].blog_seodetail;
+      this.subimageUrl = `https://dashboard.careernaksha.com${data[0].blog_subimage.url}`;
 //https://dashboard.careernaksha.com
-      this.blog_seokeyword = data.blog_seokeyword;
-      this.blog_seoimageurl = data.blog_seoimageurl;
-      this.blog_seotitle = data.blog_seotitle;
+      this.blog_seokeyword = data[0].blog_seokeyword;
+      this.blog_seoimageurl = data[0].blog_seoimageurl;
+      this.blog_seotitle = data[0].blog_seotitle;
 
       this.meta.updateTag({ name: 'description', content: this.blog_seodetail });
       this.meta.updateTag({ name: 'author', content: this.author});
       this.meta.updateTag({ name: 'keywords', content: this.blog_seokeyword });
       this.meta.updateTag({ name: 'og:image', content: this.blog_seoimageurl });
-
-      this.setTitle(this.blog_seotitle);
+      console.log(this.blog_seotitle);
+     
 
     });
 

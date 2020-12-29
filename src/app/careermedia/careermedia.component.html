@@ -1,85 +1,22 @@
+
+
 <div class="container gallery-container Events">
   <div class="tz-gallery">
     <div class="row">
-
       
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-6 col-md-4" *ngFor="let careermedia of careermedias">
         <div class="column">
           <div class="thumbnail">
-            <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/careermedia/12sciresult.jpg">
-              <img src="{{cdnHost}}/assets/galleryPhotos/careermedia/12sciresult.jpg" alt="Science Result News" width="100%" height="auto">
+            <a class="lightbox">
+              <img src="{{careermedia.cm_image}}" alt="Careernskah News" width="100%" height="auto">
             </a>
             <div class="caption">
-              <h5>GSEB 12th Science Board Results - Many Career Opportunities even for students below 50% marks</h5>
-              <a href="https://divya-b.in/olO7bbXpz6">https://divya-b.in/olO7bbXpz6</a>
+              <h4>{{careermedia["cm_title"]}}</h4>
+              <p><markdown>{{careermedia["cm_detail"]}}</markdown></p>
             </div>
           </div>
         </div>
       </div>
-
-
-      <div class="col-sm-6 col-md-4">
-        <div class="column">
-          <div class="thumbnail">
-            <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/careermedia/aligarhmedia.jpeg">
-              <img src="{{cdnHost}}/assets/galleryPhotos/careermedia/aligarhmedia.jpeg" alt="Aligarh Muslim University" width="100%" height="auto">
-            </a>
-            <div class="caption">
-              <h5>Aligarh Muslim University NEWS</h5>
-              <p>ALIGARH November 24: The Training and Placement Office (General), Aligarh Muslim University, in association with CareerNaksha, a Gujarat based educational training body, organized a workshop on "CV building, Interview Preparation and Personality Development".</p>
-              <a href="https://www.amu.ac.in/about3.jsp?did=2957">https://www.amu.ac.in/about3.jsp?did=2957</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="column">
-          <div class="thumbnail">
-            <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/careermedia/Media coverage.jpeg">
-              <img src="{{cdnHost}}/assets/galleryPhotos/careermedia/Media coverage.jpeg" alt="Divya Bhaskar News Paper" width="100%" height="auto">
-            </a>
-            <div class="caption">
-              <h5>Divya Bhaskar News Paper,Vadodara</h5>
-              <p>More than 500 students got benefited with personalized counselling at MS University - Need for growth!</p>
-                <a href="https://divyabhaskar.page.link/6iHF">https://divyabhaskar.page.link/6iHF</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="column">
-          <div class="thumbnail">
-            <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/careermedia/Sandesh.jpeg">
-              <img src="{{cdnHost}}/assets/galleryPhotos/careermedia/Sandesh.jpeg" alt="Sandesh New Paper" width="100%" height="auto">
-            </a>
-            <div class="caption">
-              <h5>Sandesh News Paper,Vadodara</h5>
-              <p>Future and exam related confusion are cleared for students in CareerNaksha.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="column">
-          <div class="thumbnail">
-            <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/careermedia/sarthi.jpeg">
-              <img src="{{cdnHost}}/assets/galleryPhotos/careermedia/sarthi.jpeg" alt="Project Saarthi Announcement" width="100%" height="auto">
-            </a>
-            <div class="caption">
-              <h5>Project Saarthi Announcement, Divya Bhaskar, Vadodara</h5>
-              <em><p>Project to prevent student suicides during board exams</p></em>
-              <p> Jan-Mar 2020
-                  Social Project to target 100 schools in Vadodara 
-                  MSUBARODA, Moodcafe, Social Work NGOs & CareerNaksha</p>
-              <a href="https://divyabhaskar.page.link/bFZb">https://divyabhaskar.page.link/bFZb</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>

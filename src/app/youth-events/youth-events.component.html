@@ -2,49 +2,22 @@
     <div class="tz-gallery">  
         <div class="row"> 
        
+
+            <div class="col-sm-6 col-md-4" *ngFor="let youthevent of youthevents">
+                <div class="column">
+                    <div class="thumbnail">
+                        <a class="lightbox"  >
+                            <img src="{{youthevent.ye_image}}" alt="Rotary Club" width="100%" height="auto">
+                        </a> 
+                        <div class="caption">   
+                            <h3>{{youthevent["ye_title"]}}</h3>
+                            <p>{{youthevent["ye_detail"]}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="col-sm-6 col-md-4">
-                <div class="column">
-                    <div class="thumbnail">
-                        <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Youth Events/Arena Animation/arena.jpeg" >
-                            <img src="{{cdnHost}}/assets/galleryPhotos/Youth Events/Arena Animation/arena.jpeg" alt="Rotary Club" width="100%" height="auto">
-                        </a> 
-                        <div class="caption">   
-                            <h3>Arena Animation</h3>
-                            <p>Our session was about the careers in animation, VFX, graphic designing etc. conducted in partnership with Arena Animation Karelibaug</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-sm-6 col-md-4">
-                <div class="column">
-                    <div class="thumbnail">
-                        <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Youth Events/Prayas, Polytechnic MS University/prayas.jpeg" >
-                            <img src="{{cdnHost}}/assets/galleryPhotos/Youth Events/Prayas, Polytechnic MS University/prayas.jpeg" alt="Rotary Club" width="100%" height="auto">
-                        </a> 
-                        <div class="caption">   
-                            <h3>Prayas, Polytechnic MS University</h3>
-                            <p>Careernaksha Glimpses of our workshop on communication skills and personality development was organized at #Prayas2019 Polytechnic The Maharaja Sayajirao University of Baroda Vadodara, Gujarat</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-                <div class="column">
-                    <div class="thumbnail">
-                        <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Youth Events/Rotaract Youth Club, Rotary Vadodara/photo1.jpeg">
-                            <img src="{{cdnHost}}/assets/galleryPhotos/Youth Events/Rotaract Youth Club, Rotary Vadodara/photo1.jpeg" alt="Rotary Club" width="100%" height="auto">
-                        </a> 
-                        <div class="caption">   
-                            <h3>Rotaract Youth Club, Rotary Vadodara</h3>
-                            <p>A career counselling seminar organized at Rotaract Vadodara on 27th October 2018</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+         
 
         </div>
      </div>

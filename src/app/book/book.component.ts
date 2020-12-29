@@ -46,6 +46,7 @@ sendData(){
   console.log(this.appoData.time);
   this.date=new Date(`${this.appoData.date}T${this.appoData.time}`).toISOString()
   this.read_date=new Date(`${this.appoData.date}T${this.appoData.time}`).toDateString()
+  //this.auth.sendAppoData(this.appoData).subscribe(this.auth.sendAppoData)
   this.http.post<any>('https://dashboard.careernaksha.com/appointments',{
     "Name":`${this.appoData.name}`,
     "Date":`${this.date}`,
@@ -56,13 +57,15 @@ sendData(){
     "Counsellor_Name": `${this.cname}`,
     "read_Date":`${this.read_date}` + ' ' + `${this.appoData.time}`
   })
+  
   .subscribe(data => {
     console.log(data + ':00')
   })
-
-  alert('Appointment Made Successfully');
   
+  alert('Appointment Made Successfully');
+  this.dialog.closeAll();
 }
+
 
 
 

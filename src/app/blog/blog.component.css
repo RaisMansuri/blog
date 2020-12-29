@@ -7,6 +7,12 @@
    
     
 }
+
+.pagination{
+    padding-left: 25%;
+    font-size: 18px;
+}
+
 .card:hover{
     transform: translateY(-2px) scale(1.02);
 
@@ -50,6 +56,9 @@
 .row{
     margin-bottom:20px;
     margin-top: 10px;
+}
+.pagination{
+    font-size: 15px;
 }
 
    

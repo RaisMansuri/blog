@@ -1,21 +1,16 @@
-
-
 <div class="container gallery-container Events">
   <div class="tz-gallery">
     <div class="row">
       
-      
-      <div class="col-sm-6 col-md-4">
-        <div class="column">
-            <div class="thumbnail" style="width: 400px;">
-              <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/L&T school.jpeg">
-                <img src="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/L&T school.jpeg" alt="L&Tscool" width="100%" height="auto">
+      <div class="col-sm-6 col-md-4" *ngFor="let projectdisha of projectdishas">
+        <div class="column" >
+            <div class="thumbnail" style="width: 300px;">
+              <a class="lightbox">
+                <img src="{{projectdisha.pd_image}}" alt="Sri Gangabai High School" width="100%" height="auto">
               </a>
               <div class="caption">
-                <p>Project DISHA is an initiative by L&T for rural & underprivileged schools of surat district. The project was executed by CareerNaksha team for 9th & 11th students of four schools. The entire program started with orientation about various career options in science, commerce & arts, followed by a psychometric test & its analysis for all students in groups, parental counselling and then one day soft skills workshop. Entire program details in this video:
-                  <a href="https://www.youtube.com/watch?v=T3PiU6vW9Gk">https://www.youtube.com/watch?v=T3PiU6vW9Gk</a> </p>
-               
-                <a href="gallery/csr-activities-social-work/project-disha" class="btn btn-primary">View More</a>
+                <h5>{{projectdisha["pd_title"]}}</h5>
+               <p><markdown>{{projectdisha["pd_detail"]}}</markdown></p>
               </div>
             </div>
           </div>

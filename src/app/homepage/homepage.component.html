@@ -26,7 +26,7 @@
                        <div class="row" style="padding-top: 30px; padding-bottom: 30px;">
                            <div class="col-lg-6 wow fadeIn" >
                                <div class="embed-responsive embed-responsive-16by9 wow fadeInRight" >
-                                <iframe style="border:3px solid rgb(0, 0, 0);" width="560" height="315" src="https://www.youtube.com/embed/d9r-1MEVOqo?autoplay=1&origin"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                                <iframe style="border:3px solid rgb(0, 0, 0);" width="560" height="315" src="https://www.youtube.com/embed/d9r-1MEVOqo?autoplay=1&origin&mute=1"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                            </div>
                            <div class="col-lg-6 wow fadeIn mb-5 text-center text-lg-left">
                             <div class="white-text">
@@ -68,7 +68,7 @@
     </p>
   </div>
   <div class="col-md-3">
-    <img src="{{cdnHost}}/assets/images/homepage/leader.png" alt="leader" class="leader" >
+    <img src="{{cdnHost}}/assets/images/homepage/leader.png" alt="leader"  class="leader" >
   </div>
 </div>
 
@@ -77,20 +77,20 @@
    <div class="steps-button-div">
      <button class="steps-button">Steps To Advance Your Career</button>
    </div>
-   <div class="row" style="width:100%;height:290px; text-align: center;">
-     <div class="col-md-4 div-one" align="center">
+   <div class="col-md-12 row" style="width:100%;height:290px; text-align: center;">
+     <div class="col-md-4 div-one" align="center" >
         <div class="circle_1"><img src="{{cdnHost}}/assets/images/homepage/Register.png" alt="options" class="options"></div>
         <p class="steps-para">Register</p>
      </div>
      <i style='font-size:50px; color: rgba(0,167,157,1)'  class='fas'>&#xf061; </i>
-
-     <div class="col-md-4 div-two" align="center" >
+   
+     <div class="col-md-4 div-two" align="center">
         <div class="circle_2"><img src="{{cdnHost}}/assets/images/test.png" alt="options" class="options"></div>
         <p class="steps-para">Take Assessment</p>
      </div>
-
+    
      <i style='font-size:50px; color: rgba(0,167,157,1)'  class='fas'>&#xf061; </i>
-
+    
      <div  class="col-md-4 div-three" align="center">
         <div class="circle_3"><img src="{{cdnHost}}/assets/images/homepage/Connect_with_counsellor.png" alt="options" class="options"></div>
         <p class="steps-para">Connect With Your <br> Personal Counsellor</p>
@@ -178,7 +178,8 @@
   <div class="story-button-div">
     <button class="story-button">Success Stories</button>
   </div>
-  <div class="row mobile-testimonial">
+
+<div class="row mobile-testimonial">
 
     <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -270,91 +271,49 @@
 
  </div>
 
+ <!--<div class="row mobile-testimonial" >
 
-
-
-
-
- <div style="padding-left:0%;padding-right:0px;" class="row inner-testimonial-row">
-
-  <div id="carouselcard" class="carousel slide" data-ride="carousel" id="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="column">
-          <div class="card">
-            <div class="circle">
-              <p><span><img src="{{cdnHost}}/assets/images/homepage/woman.png" alt="woman" class="icons"></span></p>
-            </div>
-            <p style="text-align:center"><span class='successStorySpan'>Aarushi Varshney</span> <br><span class='StorySpan'>Ex HP Enterprise, Bangalore, Graduated from KIET, Ghaziabad </span></p>
-            <p class="feedback-para">Started working with careernaksha experts as soon as I graduated. The entire process, from the counseling sessions to SoP editing, was well coordinated and helped me build profile for top schools. Throughout the application process, the assigned counsellor pushes you to make every aspect of the application perfect. The cousnelling team is highly responsive and goes out of their way to help you. I highly recommend careernaksha to any student aspiring to go fro abroad studies.<br><br></p>
+    <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"  >
+              <div class="col-md-6 successStoryDiv" style="text-align: center;" *ngFor="let testimonial of testimonials | paginate:{itemsPerPage: 1, currentPage:n}" >
+                  <div class="green" >
+                      <img src="https://dashboard.careernaksha.com{{testimonial.tm_image.url}}" alt="woman" class="icons">
+                      <p class='successStoryPara' style="text-align:center;"><span class='successStorySpan'>{{testimonial["tm_name"]}}</span> <br>{{testimonial["tm_expertise"]}}</p>
+                    
+                    </div>
+                      
+                    <p class="feedback-para">{{testimonial["tm_detail"]}}</p>            
+                </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="circle">
-              <p><span><img src="{{cdnHost}}/assets/images/homepage/woman.png" alt="woman" class="icons"></span></p>
-            </div>
-            <p style="text-align:center"><span class='successStorySpan'>Ankita Patel</span> <br> <span class='StorySpan'>Ex RA at National Institute of Immunohaematology, Mumbai, BSc & MSc from Ahmedabad University </span></p>
-            <p class="feedback-para" >I am very grateful to CareerNaksha for providing me the right guidance for pursuing higher education abroad. I have received detailed information regarding entrance exams, scholarships, courses, universities, financial management, tips to excel in coursework and job prospects available after course completion. I congratulate entire team of CareerNaksha for creating such a wonderful platform of career guidance so that students like us can take the right decision to get the best out of ourselves.</p>
-          </div>
-        </div>
-      </div>
-       
-      <div class="carousel-item">
-        <div class="column">
-          <div class="card">
-            <div class="circle">
-              <p><span>  <img src="{{cdnHost}}/assets/images/homepage/boy.png" alt="man" class="icons"> 
-              </span></p>
-            </div>
-            <p style="text-align:center"><span class='successStorySpan'>Abhinav Bhushan</span> <br> <span class='StorySpan'> Ex PES Spray Tech, Graduated from Ranchi University, Bihar </span></p>
-            <p class="feedback-para" >It has been so far a very nice experience with careernaksha. Nimish has guided me in a very structured manner, that made me very clear about my college choices. He has also helped me in building up my profile. I wish him and his team all the best for there future endeavors.<br><br><br><br></p>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <div class="circle">
-              <p><span><img src="{{cdnHost}}/assets/images/homepage/woman.png" alt="woman" class="icons"></span></p>
-            </div>
-            <p style="text-align:center"><span class='successStorySpan'>Neti Sheth</span> <br>  <span class='StorySpan'>Ex OpsHub, Graduated from Charusat, Gujarat University  </span></p>
-            <p class="feedback-para">Started working with careernaksha experts as soon as I graduated. The entire process, from the counseling sessions to SoP editing, was well coordinated and helped me build profile for top schools. Throughout the application process, the assigned counsellor pushes you to make every aspect of the application perfect. The cousnelling team is highly responsive and goes out of their way to help you. I highly recommend careernaksha to any student aspiring to go fro abroad studies.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="carousel-item">
-        <div class="column">
-          <div class="card">
-            <div class="circle">
-              <p><span><img src="{{cdnHost}}/assets/images/homepage/woman.png" alt="woman" class="icons"></span></p>
-           </div>
-           <p style="text-align:center"><span class='successStorySpan'>Hanshika Gupta</span> <br> <span class='StorySpan'>BTech,IIT Roorke,currently software developer at itemMaster </span> </p>
-           <p class="feedback-para" >Nimish is a good consultant. He is my alumni as well. And having worked with him before long time back, I was quite comfortable in getting help from him in understanding the whole MS admission process. He has helped me in understanding the different aspects one has to look for when applying to different universities and making right decisions for the same. He has a lot of knowledge and is very diligent in his work. It was nice working with him.
-                      Software developer, ItemMaster<br><br></p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="circle">
-               <p><span><img src="{{cdnHost}}/assets/images/homepage/woman.png" alt="woman" class="icons"></span></p>
-            </div>
-            <p style="text-align:center"><span class='successStorySpan'>Emily Montalvo</span> <br> <span class='StorySpan'> Assistant store leader,gamestop,New Jersey,USA </span> </p>
-            <p class="feedback-para" >I was invited to speak with CareerNaksha to help figure out the best ways to start cultivated a career path for myself. Nimish Gopal was extremely friendly and helpful in guiding me into the right direction. He was patient and took the time to see what my needs were and how I can correctly apply my skills into the working world. I'm extremely grateful I was given the opportunity to communicate with this organization and I learned so many new ways to build myself up and put my skills out in the open for people to see.</p>
-          </div>
-        </div>
+        <pagination-controls (pageChange)="n=$event" class="pagination"></pagination-controls>
       </div>
     </div>
+  </div>-->
 
-  <a style="padding-top:10px;padding-right:70px;" class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon fa fa-angle-left"  style="font-weight:900;color: rgb(0,167,157); font-size: 34px;"></span>
-      <span style="color:rgb(0,167,157);" class="sr-only">Previous</span>
-    </a>
-    <a style="padding-top:10px;padding-left:70px;" class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon fa fa-angle-right" style="font-weight:900;color: rgb(0,167,157); font-size: 35px;" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+
+
+
+ <div  class="row inner-testimonial-row" >
+
+  <div id="mycarousel" class="carousel slide" data-ride="carousel" id="carousel" >
+    <div class="carousel-inner" >
+     <div class="carousel-item active">
+     <div class="row" >
+        <div class="column" *ngFor="let testimonial of testimonials | paginate:{itemsPerPage: 2, currentPage:n}" >
+          <div class="card" >
+            <div class="circle">
+              <p><span><img src="https://dashboard.careernaksha.com{{testimonial.tm_image.url}}" alt="woman" class="icons"></span></p>
+            </div>
+            <p style="text-align:center"><span class='successStorySpan'>{{testimonial["tm_name"]}}</span> <br><span class='StorySpan'>{{testimonial["tm_expertise"]}}</span></p>
+            <p class="feedback-para">{{testimonial["tm_detail"]}}<br><br></p>
+          </div>
+        </div>
+       </div>
+      </div>
   </div>
+</div>
+<pagination-controls (pageChange)="n=$event" class="pagination"></pagination-controls>
 
 </div>
 
@@ -375,11 +334,11 @@
 
         <div class="card2 col-md-6" *ngFor="let blog of blogs">
           <div class="card3" style="width:auto; height: 95%; "  >
-          <a href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><img class="card-img-top" src="https://dashboard.careernaksha.com{{blog.blog_image.url}}" alt="Card image" style="width:100%;"></a>
+          <a href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><img class="card-img-top" src="https://dashboard.careernaksha.com{{blog.blog_image.url}}" alt="Card image" style="width:100%;"></a>
             <div class="card-body">
-            <a href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h4 class="card-title" style="color:rgb(0,167,157);font-weight:800;font-size:23px; text-align: left;">  {{blog["blog_title"]}}</h4></a>
+            <a href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h4 class="card-title" style="color:rgb(0,167,157);font-weight:800;font-size:23px; text-align: left;">  {{blog["blog_title"]}}</h4></a>
       
-              <p class="card-text" > <a style="text-decoration: none; color: black;" href="/detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support
+              <p class="card-text" > <a style="text-decoration: none; color: black;" href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support
       
                 ')">{{blog["blog_fdetail"]}}</a></p>
              <!----<a href="detailblog/{{blog['id']}}/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support

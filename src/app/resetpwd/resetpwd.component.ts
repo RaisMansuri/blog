@@ -5,6 +5,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { passValidator } from '../register-dialog/validator';
 import { Router } from '@angular/router';
 import { Token } from '@angular/compiler/src/ml_parser/lexer';
+
 @Component({
   selector: 'app-resetpwd',
   templateUrl: './resetpwd.component.html',
@@ -55,8 +56,7 @@ export class ResetpwdComponent implements OnInit {
    
     this._auth.resetpwd(this.form.value).subscribe(
       response => console.log(response),
-      
-      err => console.log(err)
+      err => console.log(err),
     );
     setTimeout(() => {
      

@@ -10,12 +10,13 @@ import { environment } from './../../environments/environment';
 import { Meta } from '@angular/platform-browser';
 import * as $ from 'jquery';
 import { HttpClient } from '@angular/common/http';
-
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomepageComponent implements OnInit {
   cdnHost = environment.cdnHost;
@@ -23,7 +24,10 @@ export class HomepageComponent implements OnInit {
   hours=50000;
   mentors=1000;
 
+  n: number[] = [];
 
+  testimonialsid="";
+  testimonials = [];
 
   constructor(private dialog: MatDialog, private authService: AuthService, 
     private router: Router,public user: UserService, private titleService: Title,public meta: Meta,private http:HttpClient) {
@@ -33,10 +37,16 @@ export class HomepageComponent implements OnInit {
     this.setTitle('Online Career Counselling, Guidance | Career Test | Counsellor')
 
     }
-
+   
     blogs =[];
     getBlogs(){
      return this.http.get<any>('https://dashboard.careernaksha.com/blogs?_sort=_id:ASC&_limit=2')
+    }
+
+
+    getTestimonial(){
+      return this.http.get<any>('https://dashboard.careernaksha.com/testimonials')
+
     }
 
   ngOnInit() {
@@ -75,6 +85,11 @@ $(window).scroll(function() {
 this.getBlogs().subscribe(data => {
   console.log("---data blogs---",data);
   this.blogs=data;
+})
+
+this.getTestimonial().subscribe(data => {
+  console.log("---data testimonial---",data);
+  this.testimonials=data;
 })
   }
 

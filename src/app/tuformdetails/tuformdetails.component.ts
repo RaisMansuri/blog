@@ -22,11 +22,15 @@ export interface Report {
   viewValue: string;
 }
 
+
+
 @Component({
   selector: 'app-tuformdetails',
   templateUrl: './tuformdetails.component.html',
   styleUrls: ['./tuformdetails.component.css']
 })
+
+
 export class TuformdetailsComponent implements OnInit {
 
   standards: Standard[] = [
@@ -67,15 +71,17 @@ export class TuformdetailsComponent implements OnInit {
     ])
   });
   constructor(private router: Router, private httpclient: HttpClient) {
-
+   
 
   }
 
 
   ngOnInit() {
-
+   
 
   }
+
+
 
   saveForm(tuform) {
     console.log('tuform');
@@ -94,4 +100,5 @@ export class TuformdetailsComponent implements OnInit {
 
     });
   }
+  
 }

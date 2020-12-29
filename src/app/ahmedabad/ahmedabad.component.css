@@ -74,4 +74,9 @@
 
   .p{
       line-height: 200%;
+      
   }
+
+ .card-body{
+    margin-left: 30px;
+ }
