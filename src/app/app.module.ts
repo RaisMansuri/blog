@@ -66,7 +66,10 @@ import { BhavnagarComponent } from './bhavnagar/bhavnagar.component';
 import { GandhinagarComponent } from './gandhinagar/gandhinagar.component';
 import { RajkotComponent } from './rajkot/rajkot.component';
 import { AnkleshwarComponent } from './ankleshwar/ankleshwar.component';
+<<<<<<< HEAD
 import { AbroadstudyComponent } from './abroadstudy/abroadstudy.component';
+=======
+>>>>>>> 3e09925dc251ddd6251ab7b2251286f0ae52ce5d
 
 
  const config = new AuthServiceConfig([  
