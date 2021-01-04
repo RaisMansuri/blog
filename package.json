@@ -21,7 +21,7 @@
   "dependencies": {
     "@angular/animations": "^9.1.9",
     "@angular/cdk": "^9.2.4",
-    "@angular/cli": "~9.1.7",
+    "@angular/cli": "^9.1.12",
     "@angular/common": "^9.1.9",
     "@angular/compiler": "^9.1.9",
     "@angular/compiler-cli": "^9.1.9",
@@ -52,6 +52,7 @@
     "ngx-counter": "^0.3.2",
     "ngx-cpf-cnpj": "^4.0.0",
     "ngx-markdown": "^11.0.1",
+    "ngx-pagination": "^5.0.0",
     "ngx-toastr": "^12.1.0",
     "prerender-node": "^3.2.5",
     "protobufjs": "^6.9.0",

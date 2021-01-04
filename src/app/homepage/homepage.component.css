@@ -1,3 +1,9 @@
+.pagination{
+  padding-left: 35%;
+  font-size: 14px;
+  margin-bottom:50px;
+}
+
 
 .read-btn{
   background-color: rgb(1,167,157,1);
@@ -291,7 +297,7 @@
   margin-left:0px;
   padding-left: 0px;
   padding-right: 0px;
-  height: 710px;
+  height: 750px;
   padding-top: 35px;
   padding-bottom:20px;
   
@@ -458,6 +464,7 @@
   .steps-div{
     height: 1100px;
   }
+
   .div-one{
     margin-top:-375px;
   }
@@ -833,7 +840,6 @@
    font-weight: 600;
    color: rgb(0,167,157);
    padding-top: 70px;
-   padding-bottom: -50px;
  }
 
  @media screen and (max-width: 600px) {
@@ -846,9 +852,18 @@
   margin-bottom: auto;
 }
 .steps-button-div{
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 
 }
+.inner-testimonial-row{
+  width:100px;
+  height: 400px;
+}
 
+.pagination{
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
 
  }

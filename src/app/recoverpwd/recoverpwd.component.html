@@ -1,0 +1,35 @@
+<div align="center" style="padding-top: 250px;padding-bottom: 230px;">
+    <div class="registration_main_div" style="overflow:hidden;">
+      <div class="registration_inner_div">
+       
+  
+        <div class="reg_form_div">
+         
+  
+          <div align="center" style="background-color:rgb(0,167,157) ;width: 370px;padding-top: 20px;padding-bottom: 20px;">
+            <p style="color:#fff;font-weight:800;font-size:16px;margin-bottom:4px;">Reset Password</p>
+            <form class="form" #userForm="ngForm" style="width: 300px;">
+              <div class="form-group">
+                <input type="text" class="form-control input-field rounded-0"  placeholder="Email" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" [(ngModel)]="recoveryEmail.email" name="email" required>
+              </div>
+              <button type="button" (click)="recoverpwd();" style="width:100%;height:34px;font-weight:700;font-size:15px;border:2px solid #fff;background-color:rgb(0,167,157);color:#fff;" class="btn" [disabled]="!userForm.valid">Send Reset Link</button>
+              <div *ngIf="message" style="color:#fff;font-weight:900;">
+                {{message}}
+              </div>
+            </form>
+           
+            <p style="color:#fff;font-weight:500;margin-top:5px;margin-bottom:0px;">Or</p>
+            <a href="/login" style="font-size:20px;font-weight:700;cursor:pointer;color:#fff;">Login to your account</a>
+          </div>
+         
+         
+          
+         </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  

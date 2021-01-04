@@ -151,9 +151,9 @@ export class AuthService {
     return this.http.post<any>(this.infoUrl, data)
   }
 
-  sendAppoData(data) {
+ sendAppoData(data) {
     return this.http.post<any>(this.appoUrl, data)
-  }
+ }
 
   sendContact(data) {
     return this.http.post<any>(this.sendContactUrl, data)

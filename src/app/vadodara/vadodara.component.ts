@@ -18,9 +18,9 @@ export class VadodaraComponent implements OnInit {
   constructor(private dialog: MatDialog, private authService: AuthService, 
     private router: Router,public user: UserService, private titleService: Title,public meta: Meta) { 
 
-      this.meta.updateTag({ name: 'description', content: 'Get career counselling and guidance from the best career counsellors in Baroda or Vadodara. We provide expert services to help in your career path selection and career test.'});
+      this.meta.updateTag({ name: 'description', content: 'Get career counselling and career guidance from the best career counsellors in Vadodara or Baroda. We provide expert services in career path selection and career test.'});
       this.meta.updateTag({ name: 'keywords', content: ' Career counselling Vadodara, best career counselling Baroda, career guidance Vadodara, best career counsellor in Baroda, career guidance and counselling' });
-      this.setTitle('Career Counselling Vadodara | Career Guidance | Counsellor in Baroda')
+      this.setTitle('Career Counselling Vadodara | Career Guidance | Best Counsellor in Baroda')
     }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { Title } from '@angular/platform-browser';
 import { environment } from './../../environments/environment';
@@ -8,10 +8,15 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
+
+
 export class BlogComponent implements OnInit {
+
+  n: number[] = [];
+
   cdnHost = environment.cdnHost;
 
-
+  
   showmore = false;
   showbutton = true;
 
@@ -29,6 +34,10 @@ export class BlogComponent implements OnInit {
    getBlogs(){
     return this.http.get<any>('https://dashboard.careernaksha.com/blogs')
    }
+
+//https://dashboard.careernaksha.com/blogs
+   //http://localhost:4200/blogs
+ 
 
   ngOnInit() {
     this.getBlogs().subscribe(data => {
@@ -55,7 +64,12 @@ export class BlogComponent implements OnInit {
     window.scroll(0, 0);
   }
 
-scroll(){
-  window.scroll(0, 0);
+  scroll(){
+    window.scroll(0, 0);
+  }
+
+setIdToStorage(id){
+  localStorage.removeItem('b_id');
+  localStorage.setItem('b_id',id);
 }
 }

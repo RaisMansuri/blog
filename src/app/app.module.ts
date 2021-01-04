@@ -44,20 +44,30 @@ import { CareerrojgarComponent } from './careerrojgar/careerrojgar.component';
 import { GlobalvidhyaComponent } from './globalvidhya/globalvidhya.component';
 import { DishaLTComponent } from './disha-lt/disha-lt.component';
 import { ExpertsComponent } from './experts/experts.component';
-import { GlobalVidhyaComponent } from './global-vidhya/global-vidhya.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import {CountdownTimerComponent} from './countdown-timer/countdown-timer.component';
 import { AhmedabadComponent } from './ahmedabad/ahmedabad.component';
 import { BlogComponent } from './blog/blog.component';
-import { DetailblogComponent } from './detailblog/detailblog.component';
+import { BlogsComponent } from './blogs/blogs.component';
 import { RouterModule } from '@angular/router';
-
 import { RecoverpwdDialogComponent } from './recoverpwd-dialog/recoverpwd-dialog.component';
 import { ResetpwdComponent } from './resetpwd/resetpwd.component';
 import { VadodaraComponent } from './vadodara/vadodara.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { AnandComponent } from './anand/anand.component';
+import { BharuchComponent } from './bharuch/bharuch.component';
+import { SuratComponent } from './surat/surat.component';
+import { NadiadComponent } from './nadiad/nadiad.component';
+import { BhavnagarComponent } from './bhavnagar/bhavnagar.component';
+import { GandhinagarComponent } from './gandhinagar/gandhinagar.component';
+import { RajkotComponent } from './rajkot/rajkot.component';
+import { AnkleshwarComponent } from './ankleshwar/ankleshwar.component';
+import { AbroadstudyComponent } from './abroadstudy/abroadstudy.component';
+
 
  const config = new AuthServiceConfig([  
   {
@@ -111,21 +121,31 @@ import { MarkdownModule } from 'ngx-markdown';
     GlobalvidhyaComponent,
     DishaLTComponent,
     ExpertsComponent,
-    GlobalVidhyaComponent,
+    AbroadstudyComponent,
     QuizComponent,
     CountdownTimerComponent,
     AhmedabadComponent,
-    DetailblogComponent,
+    BlogsComponent,
     RecoverpwdDialogComponent,
     ResetpwdComponent,
-    VadodaraComponent
+    VadodaraComponent,
+    RecoverpwdComponent,
+    AnandComponent,
+    BharuchComponent,
+    SuratComponent,
+    NadiadComponent,
+    BhavnagarComponent,
+    GandhinagarComponent,
+    RajkotComponent,
+    AnkleshwarComponent
    
   ],
   
     entryComponents: [
         LoginDialogComponent,
         RegisterDialogComponent,
-        BookComponent
+        BookComponent,
+        RecoverpwdDialogComponent,
     ],
  
 
@@ -147,8 +167,7 @@ import { MarkdownModule } from 'ngx-markdown';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     SocialLoginModule,
-  
-
+    NgxPaginationModule
     
     
   ],

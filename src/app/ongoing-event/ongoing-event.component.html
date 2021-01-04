@@ -4,64 +4,19 @@
   <div class="tz-gallery">
     <div class="row">
       
-      
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-4" *ngFor="let ongoingevent of ongoingevents">
         <div class="column">
             <div class="thumbnail" style="width: 330px;">
-              <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/school.jpeg">
-                <img src="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/school.jpeg" alt="Sri Gangabai High School" width="100%" height="auto">
+              <a class="lightbox">
+                <img src="{{ongoingevent.oe_image}}" alt="Sri Gangabai High School" width="100%" height="auto">
               </a>
               <div class="caption">
-                <h5>Sri Gangabai High School</h5>
-               
+                <h5>{{ongoingevent["oe_title"]}}</h5>
+               <p><markdown>{{ongoingevent["oe_detail"]}}</markdown></p>
               </div>
             </div>
           </div>
       </div>
-
-          
-        <div class="col-sm-6 col-md-4">
-          <div class="column">
-            <div class="thumbnail" style="width: 330px;">
-              <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/school1.jpeg">
-                <img src="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/school1.jpeg" alt="Gorwa Muslim Secondary School" width="100%" height="auto">
-              </a>
-              <div class="caption">
-                <h5>Gorwa Muslim Secondary School</h5>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4">
-          <div class="column">
-            <div class="thumbnail" style="width: 330px;">
-              <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/school2.jpeg">
-                <img src="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/school2.jpeg" alt="St.Paul’s School" width="100%" height="auto">
-              </a>
-              <div class="caption">
-                <h5>St.Paul’s School</h5>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-sm-6 col-md-4">
-          <div class="column">
-            <div class="thumbnail" style="width: 330px;">
-              <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/Shree Tulsidas R Patel Vidyalaya.jpeg">
-                <img src="{{cdnHost}}/assets/galleryPhotos/Ongoning Event/Shree Tulsidas R Patel Vidyalaya.jpeg" alt="Shree Tulsidas R Patel Vidyalaya" width="100%" height="auto">
-              </a>
-              <div class="caption">
-                <h5>Shree Tulsidas R Patel Vidyalaya</h5>
-                
-              </div>
-            </div>
-          </div>
-        </div>
     </div>
   </div>
 </div>

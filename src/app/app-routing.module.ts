@@ -22,14 +22,24 @@ import { CareerrojgarComponent } from './careerrojgar/careerrojgar.component';
 import { GlobalvidhyaComponent } from './globalvidhya/globalvidhya.component';
 import { DishaLTComponent } from './disha-lt/disha-lt.component';
 import { ExpertsComponent } from './experts/experts.component';
-import { GlobalVidhyaComponent } from './global-vidhya/global-vidhya.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { AuthGuard } from './auth.guard';
 import { AhmedabadComponent } from './ahmedabad/ahmedabad.component';
 import { VadodaraComponent } from './vadodara/vadodara.component';
 import { ResetpwdComponent } from './resetpwd/resetpwd.component';
 import { BlogComponent } from './blog/blog.component';
-import { DetailblogComponent } from './detailblog/detailblog.component'
+import { BlogsComponent } from './blogs/blogs.component';
+import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
+import { AnandComponent } from './anand/anand.component';
+import { BharuchComponent } from './bharuch/bharuch.component';
+import { SuratComponent } from './surat/surat.component';
+import { NadiadComponent } from './nadiad/nadiad.component';
+import { BhavnagarComponent } from './bhavnagar/bhavnagar.component';
+import { GandhinagarComponent } from './gandhinagar/gandhinagar.component';
+import { RajkotComponent } from './rajkot/rajkot.component';
+import { AnkleshwarComponent } from './ankleshwar/ankleshwar.component';
+import { AbroadstudyComponent } from './abroadstudy/abroadstudy.component';
+
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -41,8 +51,9 @@ export const routes: Routes = [
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
 
   },
+  { path: 'recoverpwd',component:RecoverpwdComponent},
   { path: 'blogs', component:BlogComponent},
-  { path: "detailblog/:id/:blog_url", component:DetailblogComponent},
+  { path: "blogs/:blog_url", component:BlogsComponent},
   { path: 'products', component: ProductsComponent },
   { path: 'thankyou', component: ThankyouComponent },
   { path: '', component: HomepageComponent },
@@ -70,10 +81,18 @@ export const routes: Routes = [
   { path: 'gallery/event-globalvidhya', component:GlobalvidhyaComponent},
   { path: 'gallery/csr-activities-social-work/project-disha', component:DishaLTComponent},
   { path:'experts', component:ExpertsComponent},
-  { path:'globalvidhya', component:GlobalVidhyaComponent },
-  { path:'products/globalvidhya', component:GlobalVidhyaComponent},
+  { path:'globalvidhya', component:AbroadstudyComponent },
+  { path:'products/globalvidhya', component:AbroadstudyComponent},
   { path: 'best-career-counselling-in-ahmedabad-gujarat', component:AhmedabadComponent},
   { path: 'best-career-counselling-baroda-vadodara-gujarat', component:VadodaraComponent},
+  { path: 'best-career-counselling-in-anand-gujarat', component:AnandComponent},
+  { path: 'best-career-counselling-in-bharuch-gujarat', component:BharuchComponent},
+  { path: 'best-career-counselling-in-surat-gujarat', component:SuratComponent},
+  { path: 'best-career-counselling-in-nadiad-gujarat', component:NadiadComponent},
+  { path: 'best-career-counselling-in-Bhavnagar-gujarat', component:BhavnagarComponent},
+  { path: 'best-career-counselling-in-gandhinagar-gujarat', component:GandhinagarComponent},
+  { path: 'best-career-counselling-in-Rajkot-gujarat', component:RajkotComponent},
+  { path: 'best-career-counselling-in-ankleshwar-gujarat', component:AnkleshwarComponent},
   { path: 'quiz', component:QuizComponent,canActivate:[AuthGuard]},
   {path: '**', redirectTo: ''},
 

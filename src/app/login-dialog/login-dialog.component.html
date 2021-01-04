@@ -5,7 +5,7 @@
   
          <div style="text-align:center;width:100%;">
             <button mat-button class="social-login-btn btn google-btn shadow" (click)="tryGoogleLogin()" style="margin-left:22px;"><img class="img-responsive image" src="{{cdnHost}}/assets/images/Logo Gmail.png" style="display: inline-block;"></button>
-            <button mat-button class="social-login-btn btn facebook-btn shadow" (click)="tryFacebookLogin()"><img class="img-responsive image" src="{{cdnHost}}/assets/images/facebook.png" style=" display: inline-block;"></button>
+            <!--<button mat-button class="social-login-btn btn facebook-btn shadow" (click)="tryFacebookLogin()"><img class="img-responsive image" src="{{cdnHost}}/assets/images/facebook.png" style=" display: inline-block;"></button>-->
             <button mat-button class="social-login-btn btn twitter-btn" (click)="tryTwitterLogin()"><img class="img-responsive image" src="{{cdnHost}}/assets/images/twitter.png" style="display: inline-block;"></button>
          </div>
 
@@ -24,11 +24,11 @@
       <p class="error" style="color:#fff;margin-top:6px;font-weight:900;" *ngIf="showError">{{ errorMsg }}</p>
       <div class="row" style="margin-top: 2em;">
         <div style="width:100%;text-align:center;">
-          <a (click)="openRecoverpwdDialog()" style="font-weight:500;color:#fff;text-transform: uppercase; font-size: 0.8em;position:relative;bottom:18px;cursor:pointer;">Recover Password</a>
+          <a (click)="openRecoverpwdDialog()" style="font-weight:500;color:#fff;text-transform: uppercase; font-size: 0.8em;position:relative;bottom:18px;cursor:pointer; text-decoration: none">Recover Password</a>
         </div>
       </div>
       <p style="color:#fff;font-weight:500; text-align: center;">Or</p>
-      <div (click)="openLoginDialog()" style="text-transform: uppercase; font-size:21px;font-weight:700;cursor:pointer;color:#fff;position:relative;bottom:14px; text-align: center;">Create Account</div>
+      <div (click)="openLoginDialog()" style="text-transform: uppercase; font-size:21px;font-weight:700;cursor:pointer;color:#fff;position:relative;bottom:14px; text-align: center; text-decoration: none;">Create Account</div>
     </mat-dialog-content>
     </div>
     

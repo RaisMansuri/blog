@@ -4,15 +4,15 @@
   <div class="tz-gallery">
     <div class="row">
       
-      
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-4" *ngFor="let creerrojgar of careerrojgars">
         <div class="column">
             <div class="thumbnail" style="width: 330px;">
-              <a class="lightbox" href="{{cdnHost}}/assets/galleryPhotos/jobFair/rojgar.jpeg">
-                <img src="{{cdnHost}}/assets/galleryPhotos/jobFair/rojgar.jpeg" alt="jobFair" width="100%" height="auto">
+              <a class="lightbox">
+                <img src="{{creerrojgar.cr_image}}" alt="Sri Gangabai High School" width="100%" height="auto">
               </a>
               <div class="caption">
-                <h5>Job fair</h5>               
+                <h5>{{creerrojgar["cr_title"]}}</h5>
+               <p><markdown>{{creerrojgar["cr_detail"]}}</markdown></p>
               </div>
             </div>
           </div>

@@ -11,10 +11,18 @@
     padding-right: 0px;
     
 }
+
 .login-form{
-    width:250px;
-    height: 700px;
+    width:413px;
+    height:550px;
+    margin-top:0px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:40px;
+    padding-bottom:40px;
+    background-color:rgb(50, 199, 174) ;
 }
+
 .input-field{
     border:1px solid #fff;
     background: none;
@@ -23,6 +31,7 @@
 .input-field::placeholder{
     color:#fff;
     font-size: 18px;
+    font-weight: 600;
 
 }
 .input-field:focus{
@@ -34,17 +43,81 @@ input:focus{
 .social-login-btn{
     border-radius: 50%;
     border: 4px solid #fff;
-    margin-right: 20px;
+    margin-right: 30px;
     height: 59px;
     background: none!important;
     padding: 0px;
+}
+
+.social{
+    margin-left: 110px;
 }
 .image{
     width:50px;
     height: 50px;
 }
 
-#submit:hover{
+
+.submit:hover{
     background-color: #fff;
     color: rgb(0,167,157);
+}
+
+.submit{
+
+    margin-top:25px;
+    width:373px;
+    height:55px;
+    font-weight:500;
+    font-size:25px;
+    font-weight: 600;
+    border:1px solid #fff;
+    background:none;color:#fff;
+}
+
+@media screen and (max-width: 600px) { 
+
+    .social-login-btn{
+        border-radius: 50%;
+        border: 4px solid #fff;
+        margin-right: 30px;
+        height: 59px;
+        background: none!important;
+        padding: 0px;
+    }
+
+    .social{
+        margin-left: 80px;
+    }
+
+  .login-form{
+
+        width: 330px;
+        height: 550px;
+  }
+ 
+  .form{
+
+    width: 300px;
+    height: 400px;
+
+  }
+
+
+
+  .submit{
+
+    width: 300px;
+    height: 50px;
+    margin-top:25px;
+    font-weight: 600;
+  }
+
+  .submit:hover{
+    background-color: #fff;
+    color: rgb(0,167,157);
+}
+
+  
+   
 }

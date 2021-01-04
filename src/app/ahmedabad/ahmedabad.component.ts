@@ -18,9 +18,9 @@ export class AhmedabadComponent implements OnInit {
   constructor(private dialog: MatDialog, private authService: AuthService, 
     private router: Router,public user: UserService, private titleService: Title,public meta: Meta) { 
 
-      this.meta.updateTag({ name: 'description', content: 'Get career counselling and guidance from the best career counsellors in Ahmedabad. We provide expert services to help in your career path selection and career test.'});
+      this.meta.updateTag({ name: 'description', content: 'Get career counselling and career guidance from the best career counsellors in Ahmedabad. We provide expert services in career path selection and career test.'});
       this.meta.updateTag({ name: 'keywords', content: ' Career counselling Ahmedabad, best career counselling Ahmedabad, career guidance Ahmedabad, best career counsellor in Ahmedabad, career guidance and counselling' });
-      this.setTitle('Career Counselling | Career Guidance | Counsellor in Ahmedabad')
+      this.setTitle('Career Counselling | Career Guidance | Best Counsellor in Ahmedabad')
     }
 
   ngOnInit(): void {
