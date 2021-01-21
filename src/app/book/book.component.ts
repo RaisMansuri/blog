@@ -35,9 +35,10 @@ export class BookComponent implements OnInit {
      id  =  this.getDecodedAccessToken(localStorage.getItem('token')).subject;
     
      appoData ={
+       name:"",
       date:"",
       time:"", 
-      c_name:"",
+      Counsellor_Name:"",
       id:this.id,
       
       
@@ -47,6 +48,7 @@ export class BookComponent implements OnInit {
   constructor(private auth: AuthService,private dialog: MatDialog,private http:HttpClient) { }
 
   ngOnInit() {
+    this.appoData.Counsellor_Name = localStorage.getItem('c_name');
     /*this.cname = localStorage.getItem('c_name');
     this.id = localStorage.getItem('c_id');
     this.name=localStorage.getItem('social-name');*/
@@ -59,13 +61,9 @@ sendData(){
 
  /* this.date=new Date(`${this.appoData.date}T${this.appoData.time}`).toISOString()
   this.read_date=new Date(`${this.appoData.date}T${this.appoData.time}`).toDateString()
-<<<<<<< HEAD
   //this.auth.sendappoData(this.appoData).subscribe(this.auth.sendappoData)
   
 
-=======
-  //this.auth.sendAppoData(this.appoData).subscribe(this.auth.sendAppoData)
->>>>>>> 3e09925dc251ddd6251ab7b2251286f0ae52ce5d
   this.http.post<any>('https://dashboard.careernaksha.com/appointments',{
 
     "Name":`${this.appoData.name}`,
@@ -76,7 +74,6 @@ sendData(){
     },
     "Counsellor_Name": `${this.cname}`,
     "read_Date":`${this.read_date}` + ' ' + `${this.appoData.time}`
-<<<<<<< HEAD
   })*/
   this.auth.sendAppoData(this.appoData)
   .subscribe(
@@ -95,16 +92,6 @@ sendData(){
 
   alert('Appointment Made Successfully');
   this.dialog.closeAll();*/
-=======
-  })
-  
-  .subscribe(data => {
-    console.log(data + ':00')
-  })
-  
-  alert('Appointment Made Successfully');
-  this.dialog.closeAll();
->>>>>>> 3e09925dc251ddd6251ab7b2251286f0ae52ce5d
 }
 
 

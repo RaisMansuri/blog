@@ -1,62 +1,55 @@
 .blog-pic{
-    height: 400px;
-    width: 100%;
-    background-image: url("https://d2t0yxygbqzqe9.cloudfront.net/assets/images/Blog.png");
-    background-position: center;
-   /* margin-bottom: 30px;*/
-   
-    
+height: 258px;
+width: auto;
+background-image: url("https://d2t0yxygbqzqe9.cloudfront.net/assets/images/blog_s.jpeg");
+background-position: center;
+margin-top: 60px;
+margin-bottom: 30px;
 }
 
+  
 .pagination{
     padding-left: 25%;
     font-size: 18px;
 }
-
 .card:hover{
     transform: translateY(-2px) scale(1.02);
 
 }
-
-.row{
-    margin-bottom:20px;
+.row1{
     margin-top: 60px;
+
 }
+
 
 .card2{
     padding-bottom: 10px;
-}
-
-.food-blog{
-    height: 700px;
-}
-.food-button{
-    margin-top:77px;
 }
 
 .container{
     width: auto;
     height: auto;
 }
+@media screen and (max-width:600px) { 
+  .blog-pic{
+        width: auto;
+        height: 120px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%;
+        margin-top: 65px;
+    }
 
-
-@media screen and (min-width: 300px) and (max-width:600px) { 
-   .blog-pic{
-       width: 100%;
-       background-repeat: no-repeat;
-       height: 302px;
-       background-size: 100%;
-      
-   }
+  
    .card:hover{
-    transform: translateY(-2px) scale(1.02);
+        transform: translateY(-2px) scale(1.02);
+    }
 
-
-}
-.row{
+/*.row{
     margin-bottom:20px;
     margin-top: 10px;
-}
+}*/
+
 .pagination{
     font-size: 15px;
 }

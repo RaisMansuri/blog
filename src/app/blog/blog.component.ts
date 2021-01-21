@@ -14,8 +14,8 @@ export class BlogComponent implements OnInit {
 
   n: number[] = [];
 
+  
   cdnHost = environment.cdnHost;
-
   
   showmore = false;
   showbutton = true;

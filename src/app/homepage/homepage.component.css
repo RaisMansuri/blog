@@ -467,6 +467,7 @@
 
   .div-one{
     margin-top:-375px;
+   
   }
   .div-two{
     margin-top:-75px;
@@ -864,6 +865,18 @@
   text-align: center;
   font-size: 10px;
   margin-bottom: 10px;
+}
+
+.div-one{
+  margin-left: 25%;
+}
+
+.div-two{
+  margin-left: 25%;
+}
+
+.div-three{
+  margin-left: 25%;
 }
 
  }
