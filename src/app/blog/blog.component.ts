@@ -14,7 +14,9 @@ export class BlogComponent implements OnInit {
 
   n: number[] = [];
 
-  
+ 
+
+
   cdnHost = environment.cdnHost;
   
   showmore = false;
@@ -30,7 +32,9 @@ export class BlogComponent implements OnInit {
    this.setTitle('Blog Articles | CareerNaksha');
 
    }
-   blogs =[];
+   blogs: string[] = ['{{blog[blog_title]}},{{blog["blog_fdetail"]}}'];
+
+   //blogs =[];
    getBlogs(){
     return this.http.get<any>('https://dashboard.careernaksha.com/blogs')
    }

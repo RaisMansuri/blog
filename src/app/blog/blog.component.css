@@ -7,7 +7,16 @@ margin-top: 60px;
 margin-bottom: 30px;
 }
 
-  
+.form-group{
+    width: 40%; 
+    margin-left: 680px;
+
+}
+
+.form-control{
+    font-size: 20px;
+}
+
 .pagination{
     padding-left: 25%;
     font-size: 18px;

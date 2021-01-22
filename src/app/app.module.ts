@@ -68,6 +68,7 @@ import { RajkotComponent } from './rajkot/rajkot.component';
 import { AnkleshwarComponent } from './ankleshwar/ankleshwar.component';
 import { AbroadstudyComponent } from './abroadstudy/abroadstudy.component';
 import { GlobalVidhyaComponent } from './global-vidhya/global-vidhya.component'
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
  const config = new AuthServiceConfig([  
   {
@@ -168,7 +169,8 @@ import { GlobalVidhyaComponent } from './global-vidhya/global-vidhya.component'
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     SocialLoginModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    Ng2SearchPipeModule
     
     
   ],
