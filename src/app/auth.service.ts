@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router'
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { RegisterComponent } from './register/register.component';
 
 import { environment } from './../environments/environment';
 

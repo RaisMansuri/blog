@@ -1,5 +1,4 @@
 <!DOCTYPE html>
- 
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transparent" style="background-color: white !important; opacity: 0.92 !important; padding: 0; padding-left: 2em;z-index: 1;">
   <a class="navbar-brand" href="/" (click)="setTitle('Online Career Counselling, Guidance | Career Counselor, Consultant in India')">
     <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/logo.png" alt="logo" style="max-height: 3em; margin-left: 40%;z-index: 1;" class="img-responsive" >
@@ -10,24 +9,18 @@
   </button>
   <div class="collapse navbar-collapse dropdown-center" id="navbarNav" style="height:60px;z-index: 1;">
     <ul class="navbar-nav ml-auto" style="height:100%;">
-      
         <li class="nav-item px-3 head-link">
             <a class="nav-link"   aria-controls="navbarNav" (click)="setTitle('Online Career Counseling | Personal Counselor | Personality Assessment | Guidance India USA');collapseNav()" href="/homepage">Home </a>
           </li>
-          
           <li class="nav-item px-3 head-link">
             <a class="nav-link"  target="_blank" rel="noopener" style="color:#1b75bb;font-weight:600;" aria-controls="navbarNav"  href="https://careershala.careernaksha.com/">CareerShala<sup><span class="badge badge-primary">New</span></sup></a>
           </li>
-
           <li class="nav-item px-3 head-link">
             <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="products/globalvidhya">GlobalVidhya</a>
           </li>
-
         <li class="nav-item px-3 head-link">
             <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="/about">About Us</a>
-           
         </li>
-         
         <li class="nav-item px-3 head-link">
             <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="/products">Products</a>
           </li>
@@ -37,15 +30,12 @@
       <li class="nav-item px-3 head-link">
         <a class="nav-link"   aria-controls="navbarNav" (click)="collapseNav()" href="/gallery">Gallery</a>
       </li>
-
       <li class="nav-item head-link login-list" *ngIf="!authService.loggedIn()">
         <a class="nav-link"  data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" (click)="openLoginDialog()">Login/Register</a>
       </li>
-
         <li class="nav-item head-link login-list" *ngIf="authService.loggedIn()">
         <a class="nav-link"  (click)="collapseNav()" href="/profile">Profile</a>
       </li>
-
       <li class="nav-item head-link dropdown login-list" *ngIf="authService.loggedIn()">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         </a>
@@ -53,19 +43,12 @@
           <a class="dropdown-item" (click)="authService.logoutUser();setTitle('Online Career Counselling, Guidance | Career Counselor, Consultant in India')">Logout</a>
         </div>
       </li>
-      
     </ul>
   </div>
 </nav>
-
-
-
-
 <router-outlet>
 </router-outlet>
-
 <footer id="footer">
-
   <div class="row">
     <div class="col-md-5" style="padding-right: 45px;padding-left:40px;">
       <div class="row" style="margin-bottom:20px;" >
@@ -76,7 +59,6 @@
           to  build your career. Also, we help to  explore new career options
           that are in demand and cater to your interest</p>
       </div>
-
       <div class="row">
         <div style="width:100%;"><h5 style="color:rgb(0,167,157);font-weight:800;">Social</h5></div>
           <div>
@@ -88,30 +70,21 @@
                   <li><a href="https://www.youtube.com/careernaksha"><i style="color:rgb(255, 255, 255);font-size:20px;" class="fab fa-youtube" rel="noopener"></i></a></li>
                 </ul>
           </div>
-         
         </div>
-
         <div class="row" style="margin-bottom:20px; margin-top: 20px;" >
           <h5 style="color:rgb(0,167,157);font-weight:800;">Available Offline & Online in English | Hindi | Gujarati</h5>
-
 <br>
-        <p style="color:#fff;"><a href="/best-career-counselling-in-ahmedabad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ahmedabad</i></a> | <a href="/best-career-counselling-baroda-vadodara-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Vadodara</i></a> | <a href="/best-career-counselling-in-anand-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Anand</i></a> | <a href="/best-career-counselling-in-Bhavnagar-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bhavnagar</i></a> | <a href="/best-career-counselling-in-gandhinagar-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Gandhinagar</i></a> | <a href="/best-career-counselling-in-Rajkot-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Rajkot</i></a> | <a href="/best-career-counselling-in-surat-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Surat</i></a> | <a href="/best-career-counselling-in-bharuch-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bharuch</i> </a> |  <a href="/best-career-counselling-in-ankleshwar-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ankleshwar</i></a> | <a href="/best-career-counselling-in-nadiad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Nadiad</i></a></p>
+        <p style="color:#fff;"><a href="location/best-career-counselling-in-ahmedabad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ahmedabad</i></a> | <a href="/best-career-counselling-baroda-vadodara-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Vadodara</i></a> | <a href="/best-career-counselling-in-anand-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Anand</i></a> | <a href="/best-career-counselling-in-Bhavnagar-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bhavnagar</i></a> | <a href="/best-career-counselling-in-gandhinagar-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Gandhinagar</i></a> | <a href="/best-career-counselling-in-Rajkot-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Rajkot</i></a> | <a href="/best-career-counselling-in-surat-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Surat</i></a> | <a href="/best-career-counselling-in-bharuch-gujarat"> <i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Bharuch</i> </a> |  <a href="/best-career-counselling-in-ankleshwar-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Ankleshwar</i></a> | <a href="/best-career-counselling-in-nadiad-gujarat"><i style="color:rgb(255, 255, 255);font-size:16px;" class="fab fa-ahmedabad">Nadiad</i></a></p>
         </div>
     </div>
-
     <div class="col-md-3 contact-div">
- 
         <div class="row"> 
           <h5 style="color:rgb(0,167,157);font-weight:800;">Contact Us</h5>
         </div>
-
         <div class="row">
-
           <div class="md-col-12"><p style="color:#fff"><i class="fa fa-phone" style="font-size:19px;color:rgb(0,167,157);margin-top:5px;"></i>  +91-8469149288</p></div>
           <div class="md-col-12"><p style="color:#fff;"><i class="fa fa-envelope" style="color:rgb(0,167,157);"></i>support@careernaksha.com</p></div>
-                
         </div>
-
           <div class="row" style="margin-bottom:10px;">
               <textarea [(ngModel)]="sendContact.email" style="padding:8px;border:2px solid rgb(0,167,157);;background:none;width:100%;margin-bottom:6px;resize:none;height:40px;" placeholder="e-mail"  name="email" id="email"></textarea>
               <textarea [(ngModel)]="sendContact.phone" style="padding:8px;border:2px solid rgb(0,167,157);;background:none;width:100%;margin-bottom:6px;resize:none;height:40px;" placeholder="phone number" name="phone" id="phone"></textarea>
@@ -126,9 +99,7 @@
            </div>
          </div>
     </div>
-  
-    <div class="col md-4 blog-col"   >
- 
+    <div class="col md-4 blog-col">
       <div style="text-align:center;"><h5 style="color:rgb(0,167,157);font-weight:800;">Latest Blog Articles</h5></div>
       <div class="col-md-13" *ngFor="let blog of blogs" >
       <div  style="padding-bottom:8px;border-bottom: 2px solid rgb(0,167,157);margin-bottom:25px;margin-right:10px;color:#fff; font-family:'Raleway',sans-serif ;" class="row"><a href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle(' Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><h6 class="card-title" style="color:rgb(255, 255, 255);font-size:15px;">  {{blog["blog_title"]}}</h6></a></div>
@@ -137,37 +108,27 @@
         <a href="/blogs" (click)="setTitle('Blog Articles | CareerNaksha')"  class="button">More Articles</a>
         <!--<button class="more" (click)="setTitle('Blog Articles | CareerNaksha')" > <a style="text-decoration: none; color:#ffffff" href="/blogs"><-<button class="more" style="">--More Articles</a></button>-->
       </div>
-     
    </div>
-
-
   </div>
 <br>
 <hr>
-
 <div id="collapseOne" class="collapse show"  data-parent="#accordionExample">
   <div class="footerdetail">
     Choosing and pursuing the right career path is one of the key decisions every student needs to make. Adopting a scientific approach which is well researched and thought through is critical for making this decision. The pace at which careers are evolving and traditional career paths are losing the edge, it is essential that students increase their awareness and take decisions which are future proof!
   </div>
 </div>
-
-
-
 <div id="collapsetwo" class="collapse show"  data-parent="#accordionExample">
   <div class="footerdetail">
-    
 <h3 data-toggle="collapse" data-target="#collapseExample"
 aria-expanded="false" aria-controls="collapseExample" >About 'CareerNaksha'</h3>
 <div class="collapse" id="collapseExample">
    <p> ‘CareerNaksha’ is an ed-tech startup based out of Vadodara, Gujarat (Incubated at MS University, Baroda) run by alumni from IITs, IIMs, IIMC, NITs & MSU along with world’s leading career psychologists, HR professionals & Industry experts. CareerNaksha, is the first incubatee startup, that has been incubated at Center for Incubation, Office of Career Advancement for Students, Maharaja Sayajirao University (MSU), Vadodara is recognized under Startup India Initiative and registered under the Companies Act of 2012. </p>
 <p>CareerNaksha provides modern personalized, data-driven, psychometrics based career counselling & development platform to school & college students, graduates and early professionals. They also conduct hands-on workshops, seminars for students to prepare for market skills like AI, ML, UI-UX Design, Digital Marketing, Communication Skills, and Social Emotional Learning (HOTS) etc. Every year their event GlobalVidhya provides opportunities for students to seek guidance on abroad studies, overseas education and application assistance at very affordable pricing compared to market. They have their own website, android app & social media handles to provide direct access to their counselling services in real-time.</p>
-
 <p>Using our platform and products students can discover their unique career potential and can take well-informed career decisions. We leverage statistics and AI technology along with scientific research to provide unbiased career options. The psychometric aptitude assessment career test is based on 5-Dimensions (personality, behaviour, aptitude, skills, workstyles) which enables personalized career counselling using data analysis.
 </p>
 </div>
   </div>
 </div>
-
 <div id="collapsethree" class="collapse show"  data-parent="#accordionExample">
   <div class="footerdetail">
     <h3 data-toggle="collapse" data-target="#collapseExample1"
@@ -176,15 +137,12 @@ aria-expanded="false" aria-controls="collapseExample" >About 'CareerNaksha'</h3>
     </p>
   </div>
 </div>
-
 <div class="footerdetail">
   <h3 data-toggle="collapse" data-target="#collapseExample2"
   aria-expanded="false" aria-controls="collapseExample" >What Are Psychometric Assessment Career Tests?</h3>
   <p class="collapse" id="collapseExample2">A Psychometric Assessment is a test designed to understand where your unique set of strengths, aptitudes and skills lie, in order to recommend the right careers for you. The CareerNaksha Career Assessment is an online career test that evaluates 5 dimensions including Personality, Aptitude, Interest, Skills, Knowledge and Work Style, to suggest career options. It is well researched test based on O*NET International Career Framework. Not only that, you get detailed career development plans, list of colleges, career paths and expert guidance with the 10+ page detailed career report, so you can take the first step towards achieving your career goals. Specifically built for the Indian population, the CareerNaksha career assessment understands you better to help you make the most accurate and well-informed career decisions.
   </p>
 </div>
-
-
 <div id="collapsefour" class="collapse show"  data-parent="#accordionExample">
 <div class="footerdetail">
   <h3 data-toggle="collapse" data-target="#collapseExample4"
@@ -193,7 +151,6 @@ aria-expanded="false" aria-controls="collapseExample" >About 'CareerNaksha'</h3>
   </p>
 </div>
 </div>
-
 <div id="collapsefive" class="collapse show"  data-parent="#accordionExample">
 <div class="footerdetail">
   <h3 data-toggle="collapse" data-target="#collapseExample3"
@@ -203,43 +160,35 @@ aria-expanded="false" aria-controls="collapseExample" >About 'CareerNaksha'</h3>
 </div>
 </div>
 <hr>
-
 <div class="row" >
   <div class="col-md-3"></div>
- 
   <div class="col-md-3"></div>
  <div  class="col-md-12 desktop" style="padding-bottom: 0%; text-align: center;">
-  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/paytm.jpg" alt="" class="logo1">
-  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/visa.jpg" alt="" class="logo2">
-  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/mastercard.jpg" alt="" class="logo3">
-  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/razorpay.png" alt="" class="logo4">
-  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/gpay.png" alt="" class="logo5">
-  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/neft.gif" alt="" class="logo6">
-  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/imps.jpg" alt="" class="logo7">
-
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/paytm.jpg" alt="paytm" class="logo1">
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/visa.jpg" alt="visa" class="logo2">
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/mastercard.jpg" alt="mastercard" class="logo3">
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/razorpay.png" alt="razorpay" class="logo4">
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/gpay.png" alt="gpay" class="logo5">
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/neft.gif" alt="neft" class="logo6">
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/imps.jpg" alt="imps" class="logo7">
 </div>
-
-
 <div class="mobile col-md-12">
   <div  id="mycarousel2"  class="carousel slide carousel-multi-item"  data-ride="carousel" style="padding-bottom: 2%;  padding-left: 60px;">  
     <div class="carousel-inner ">
       <div class="carousel-item active ">
-        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/paytm.jpg" alt="" class="logo1">
-        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/visa.jpg" alt="" class="logo2">
-
+        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/paytm.jpg" alt="paytm" class="logo1">
+        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/visa.jpg" alt="visa" class="logo2">
       </div>
-     
- 
-      <div class="carousel-item">
-        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/mastercard.jpg" alt="" class="logo3">
-        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/razorpay.png" alt="" class="logo4">
+    <div class="carousel-item">
+        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/mastercard.jpg" alt="mastercard" class="logo3">
+        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/razorpay.png" alt="razorpay" class="logo4">
       </div>
       <div class="carousel-item">
-        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/gpay.png" alt="" class="logo5">
-    <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/neft.gif" alt="" class="logo6">
+        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/gpay.png" alt="gpay" class="logo5">
+  <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/neft.gif" alt="neft" class="logo6">
       </div>
       <div class="carousel-item">
-        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/imps.jpg" alt="" class="logo7">
+        <img src="https://d2t0yxygbqzqe9.cloudfront.net/assets/images/homepage/footerimg/imps.jpg" alt="imps" class="logo7">
       </div>
     </div>
     <a  class="carousel-control-prev" href="#mycarousel2" role="button" data-slide="prev">
@@ -254,18 +203,10 @@ aria-expanded="false" aria-controls="collapseExample" >About 'CareerNaksha'</h3>
       <div class="col-md-2"></div>
  </div>
  </div>
-
-
-
-
-
-  <div class="row" style="margin-top:5px;">
+ <div class="row" style="margin-top:5px;">
     <div class="fot col-md-12" style="text-align: center;">
-     
          <p style="color:#fff;">Built with ❤️ in India | CareerNaksha Copyrights 2020 @Realtime Data Analysis Pvt. Ltd.</p>
          <a style="color:#fff;" href="/privacy-policy">Privacy Policy</a>
-     
     </div>
   </div>
-  
 </footer>

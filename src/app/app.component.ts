@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 import { ViewEncapsulation } from '@angular/core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -21,6 +22,8 @@ import { ViewEncapsulation } from '@angular/core';
 })
 
 export class AppComponent {
+  faCoffee = faCoffee;
+
   @ViewChild('navbarToggler') navbarToggler:ElementRef;
 
   title = 'realtime';

@@ -1,15 +1,10 @@
 <div class="blog-pic">
   
 </div>
-<div class="form-group">
-  <input type="text" class="form-control" placeholder="blog search...." [(ngModel)]="term">
-</div> 
 
-
-<!--paginate:{itemsPerPage: 6, currentPage:n}-->
 <div class="container">
 <div class="row">
-  <div class="card2 col-md-4" *ngFor="let blog of blogs | filter:term | paginate:{itemsPerPage: 6, currentPage:n}">
+  <div class="card2 col-md-4" *ngFor="let blog of blogs | paginate:{itemsPerPage: 6, currentPage:n}">
     <div class="card" style="width:auto; height: 99%; " (click)="setIdToStorage(blog._id)"  >
     <a href="/blogs/{{blog['blog_url']}}" (click)="scroll();setTitle('Career as Corporate Trainer | Training | School Teaching | Customer Support')" style="text-decoration:none;" ><img class="card-img-top" src="https://dashboard.careernaksha.com{{blog.blog_image.url}}" alt="Card image" style="width:100%;"></a>
       <div class="card-body">

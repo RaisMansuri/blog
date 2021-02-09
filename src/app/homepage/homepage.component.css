@@ -4,6 +4,11 @@
   margin-bottom:50px;
 }
 
+.fas {
+  margin-top: 70px;
+  overflow: hidden;
+  margin-right: 5%;
+}
 
 .read-btn{
   background-color: rgb(1,167,157,1);
@@ -101,13 +106,7 @@
   }
 }
 
-.fas {
-  padding-right: 15px;
-  margin-top: 70px;
-  margin-left: 5px;
-  margin-right: -70px;
-  overflow: hidden;
-}
+
 
 @media screen and (max-width:768px)
 {
@@ -290,6 +289,7 @@
   font-size: 22px;
   color: rgb(0,167,157);
   margin-top: 9px;
+  margin-left: -40%;
 }
 
 .story-div{
@@ -465,7 +465,7 @@
     height: 1100px;
   }
 
-  .div-one{
+  /*.div-one{
     margin-top:-375px;
    
   }
@@ -474,7 +474,7 @@
   }
   .div-three{
     margin-top: 80px;
-  }
+  }*/
   .content-span{
     font-size: 23px;
   }
@@ -621,21 +621,12 @@
   
   
 }
-
-
-
-
-
 @media screen and (min-width: 850px) and (max-width: 1200px) { 
   
  .feedback-para{
    font-size: 11px;
  }
 }
-
-
-
-
 
 @media screen and (min-width: 850px) and (max-width: 1500px) { 
   
@@ -804,38 +795,6 @@
     display: flex;
     justify-content: space-between;
   }
-
-
-  /*****************************video css********************
-
-
-.view {
-    height: 100vh !important;
-}
-.navbar:not(.top-nav-collapse) {
-    background: transparent !important;
-}
-@media (max-width: 768px) {
-    .navbar:not(.top-nav-collapse) {
-        background: #7d8488 !important;
-    }
-}
-.rgba-gradient .full-bg-img {
-    background: linear-gradient(45deg, rgba(242, 34, 50, 0.5), rgba(255, 187, 54, 0.6) 100%);
-}
-@media (max-width: 740px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-        height: 700px;
-    }
-}
-
- */
-
-
-
  .fadeInLeft{
    font-size: 20px;
    font-weight: 600;
@@ -847,7 +806,7 @@
 
   .carousel-item{
 
-    margin-left: 13px;
+    margin-left: 15px;
   }
 .carousel-inner{
   margin-bottom: auto;
@@ -868,15 +827,23 @@
 }
 
 .div-one{
-  margin-left: 25%;
+  margin-left: 16%;
 }
 
 .div-two{
-  margin-left: 25%;
+  margin-left: 16%;
 }
 
 .div-three{
-  margin-left: 25%;
+  margin-left: 16%;
 }
 
+.green{
+
+  margin-left: 20px;
+}
+
+.steps-para{
+  margin-left: -30%;
+}
  }

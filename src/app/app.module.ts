@@ -48,27 +48,18 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import {CountdownTimerComponent} from './countdown-timer/countdown-timer.component';
-import { AhmedabadComponent } from './ahmedabad/ahmedabad.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogsComponent } from './blogs/blogs.component';
-import { RouterModule } from '@angular/router';
 import { RecoverpwdDialogComponent } from './recoverpwd-dialog/recoverpwd-dialog.component';
 import { ResetpwdComponent } from './resetpwd/resetpwd.component';
-import { VadodaraComponent } from './vadodara/vadodara.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { AnandComponent } from './anand/anand.component';
-import { BharuchComponent } from './bharuch/bharuch.component';
-import { SuratComponent } from './surat/surat.component';
-import { NadiadComponent } from './nadiad/nadiad.component';
-import { BhavnagarComponent } from './bhavnagar/bhavnagar.component';
-import { GandhinagarComponent } from './gandhinagar/gandhinagar.component';
-import { RajkotComponent } from './rajkot/rajkot.component';
-import { AnkleshwarComponent } from './ankleshwar/ankleshwar.component';
+
 import { AbroadstudyComponent } from './abroadstudy/abroadstudy.component';
-import { GlobalVidhyaComponent } from './global-vidhya/global-vidhya.component'
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LoadableModule } from 'ngx-loadable';
+import { HeroLoaderModule } from '@herodevs/hero-loader';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
  const config = new AuthServiceConfig([  
   {
@@ -125,22 +116,11 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AbroadstudyComponent,
     QuizComponent,
     CountdownTimerComponent,
-    AhmedabadComponent,
     BlogsComponent,
     RecoverpwdDialogComponent,
     ResetpwdComponent,
-    VadodaraComponent,
     RecoverpwdComponent,
-    AnandComponent,
-    BharuchComponent,
-    SuratComponent,
-    NadiadComponent,
-    BhavnagarComponent,
-    GandhinagarComponent,
-    RajkotComponent,
-    AnkleshwarComponent,
-    GlobalVidhyaComponent
-   
+    
   ],
   
     entryComponents: [
@@ -170,9 +150,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AngularFireAuthModule,
     SocialLoginModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
-    
-    
+    LoadableModule,
+    HeroLoaderModule,
+    FontAwesomeModule,
+   
   ],
   providers: [AuthService,AuthGuard,Title,Meta,{provide: AuthServiceConfig, useFactory: provideConfig}],
   bootstrap: [AppComponent]
